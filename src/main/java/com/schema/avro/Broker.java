@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Broker extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4227612460731849241L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Broker\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"brokerId\",\"type\":\"long\"},{\"name\":\"brokerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}}]}");
+  private static final long serialVersionUID = 6550453262447741964L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Broker\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"brokerId\",\"type\":\"long\"},{\"name\":\"brokerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,7 +75,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    private java.lang.String brokerName;
    private double cmsPercent;
    private java.lang.Double cmsValue;
-   private com.cardif.avro.Agent agent;
+   private com.schema.avro.Agent agent;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -92,7 +92,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param cmsValue The new value for cmsValue
    * @param agent The new value for agent
    */
-  public Broker(java.lang.Long brokerId, java.lang.String brokerName, java.lang.Double cmsPercent, java.lang.Double cmsValue, com.cardif.avro.Agent agent) {
+  public Broker(java.lang.Long brokerId, java.lang.String brokerName, java.lang.Double cmsPercent, java.lang.Double cmsValue, com.schema.avro.Agent agent) {
     this.brokerId = brokerId;
     this.brokerName = brokerName;
     this.cmsPercent = cmsPercent;
@@ -122,7 +122,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
     case 1: brokerName = value$ != null ? value$.toString() : null; break;
     case 2: cmsPercent = (java.lang.Double)value$; break;
     case 3: cmsValue = (java.lang.Double)value$; break;
-    case 4: agent = (com.cardif.avro.Agent)value$; break;
+    case 4: agent = (com.schema.avro.Agent)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -171,7 +171,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    * Gets the value of the 'agent' field.
    * @return The value of the 'agent' field.
    */
-  public com.cardif.avro.Agent getAgent() {
+  public com.schema.avro.Agent getAgent() {
     return agent;
   }
 
@@ -181,8 +181,8 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    * Creates a new Broker RecordBuilder.
    * @return A new Broker RecordBuilder
    */
-  public static com.cardif.avro.Broker.Builder newBuilder() {
-    return new com.cardif.avro.Broker.Builder();
+  public static com.schema.avro.Broker.Builder newBuilder() {
+    return new com.schema.avro.Broker.Builder();
   }
 
   /**
@@ -190,11 +190,11 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param other The existing builder to copy.
    * @return A new Broker RecordBuilder
    */
-  public static com.cardif.avro.Broker.Builder newBuilder(com.cardif.avro.Broker.Builder other) {
+  public static com.schema.avro.Broker.Builder newBuilder(com.schema.avro.Broker.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Broker.Builder();
+      return new com.schema.avro.Broker.Builder();
     } else {
-      return new com.cardif.avro.Broker.Builder(other);
+      return new com.schema.avro.Broker.Builder(other);
     }
   }
 
@@ -203,11 +203,11 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
    * @param other The existing instance to copy.
    * @return A new Broker RecordBuilder
    */
-  public static com.cardif.avro.Broker.Builder newBuilder(com.cardif.avro.Broker other) {
+  public static com.schema.avro.Broker.Builder newBuilder(com.schema.avro.Broker other) {
     if (other == null) {
-      return new com.cardif.avro.Broker.Builder();
+      return new com.schema.avro.Broker.Builder();
     } else {
-      return new com.cardif.avro.Broker.Builder(other);
+      return new com.schema.avro.Broker.Builder(other);
     }
   }
 
@@ -222,8 +222,8 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
     private java.lang.String brokerName;
     private double cmsPercent;
     private java.lang.Double cmsValue;
-    private com.cardif.avro.Agent agent;
-    private com.cardif.avro.Agent.Builder agentBuilder;
+    private com.schema.avro.Agent agent;
+    private com.schema.avro.Agent.Builder agentBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -234,7 +234,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Broker.Builder other) {
+    private Builder(com.schema.avro.Broker.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.brokerId)) {
         this.brokerId = data().deepCopy(fields()[0].schema(), other.brokerId);
@@ -257,7 +257,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasAgentBuilder()) {
-        this.agentBuilder = com.cardif.avro.Agent.newBuilder(other.getAgentBuilder());
+        this.agentBuilder = com.schema.avro.Agent.newBuilder(other.getAgentBuilder());
       }
     }
 
@@ -265,7 +265,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
      * Creates a Builder by copying an existing Broker instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Broker other) {
+    private Builder(com.schema.avro.Broker other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.brokerId)) {
         this.brokerId = data().deepCopy(fields()[0].schema(), other.brokerId);
@@ -304,7 +304,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'brokerId'.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder setBrokerId(long value) {
+    public com.schema.avro.Broker.Builder setBrokerId(long value) {
       validate(fields()[0], value);
       this.brokerId = value;
       fieldSetFlags()[0] = true;
@@ -324,7 +324,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'brokerId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder clearBrokerId() {
+    public com.schema.avro.Broker.Builder clearBrokerId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -343,7 +343,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'brokerName'.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder setBrokerName(java.lang.String value) {
+    public com.schema.avro.Broker.Builder setBrokerName(java.lang.String value) {
       validate(fields()[1], value);
       this.brokerName = value;
       fieldSetFlags()[1] = true;
@@ -363,7 +363,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'brokerName' field.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder clearBrokerName() {
+    public com.schema.avro.Broker.Builder clearBrokerName() {
       brokerName = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -383,7 +383,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'cmsPercent'.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder setCmsPercent(double value) {
+    public com.schema.avro.Broker.Builder setCmsPercent(double value) {
       validate(fields()[2], value);
       this.cmsPercent = value;
       fieldSetFlags()[2] = true;
@@ -403,7 +403,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'cmsPercent' field.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder clearCmsPercent() {
+    public com.schema.avro.Broker.Builder clearCmsPercent() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -422,7 +422,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'cmsValue'.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder setCmsValue(java.lang.Double value) {
+    public com.schema.avro.Broker.Builder setCmsValue(java.lang.Double value) {
       validate(fields()[3], value);
       this.cmsValue = value;
       fieldSetFlags()[3] = true;
@@ -442,7 +442,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'cmsValue' field.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder clearCmsValue() {
+    public com.schema.avro.Broker.Builder clearCmsValue() {
       cmsValue = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -452,7 +452,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Gets the value of the 'agent' field.
       * @return The value.
       */
-    public com.cardif.avro.Agent getAgent() {
+    public com.schema.avro.Agent getAgent() {
       return agent;
     }
 
@@ -462,7 +462,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * @param value The value of 'agent'.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder setAgent(com.cardif.avro.Agent value) {
+    public com.schema.avro.Broker.Builder setAgent(com.schema.avro.Agent value) {
       validate(fields()[4], value);
       this.agentBuilder = null;
       this.agent = value;
@@ -482,12 +482,12 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
      * Gets the Builder instance for the 'agent' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.Agent.Builder getAgentBuilder() {
+    public com.schema.avro.Agent.Builder getAgentBuilder() {
       if (agentBuilder == null) {
         if (hasAgent()) {
-          setAgentBuilder(com.cardif.avro.Agent.newBuilder(agent));
+          setAgentBuilder(com.schema.avro.Agent.newBuilder(agent));
         } else {
-          setAgentBuilder(com.cardif.avro.Agent.newBuilder());
+          setAgentBuilder(com.schema.avro.Agent.newBuilder());
         }
       }
       return agentBuilder;
@@ -499,7 +499,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
      * @return This builder.
      */
 
-    public com.cardif.avro.Broker.Builder setAgentBuilder(com.cardif.avro.Agent.Builder value) {
+    public com.schema.avro.Broker.Builder setAgentBuilder(com.schema.avro.Agent.Builder value) {
       clearAgent();
       agentBuilder = value;
       return this;
@@ -517,7 +517,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       * Clears the value of the 'agent' field.
       * @return This builder.
       */
-    public com.cardif.avro.Broker.Builder clearAgent() {
+    public com.schema.avro.Broker.Builder clearAgent() {
       agent = null;
       agentBuilder = null;
       fieldSetFlags()[4] = false;
@@ -541,7 +541,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
             throw e;
           }
         } else {
-          record.agent = fieldSetFlags()[4] ? this.agent : (com.cardif.avro.Agent) defaultValue(fields()[4]);
+          record.agent = fieldSetFlags()[4] ? this.agent : (com.schema.avro.Agent) defaultValue(fields()[4]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -612,7 +612,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
       }
 
       if (this.agent == null) {
-        this.agent = new com.cardif.avro.Agent();
+        this.agent = new com.schema.avro.Agent();
       }
       this.agent.customDecode(in);
 
@@ -642,7 +642,7 @@ public class Broker extends org.apache.avro.specific.SpecificRecordBase implemen
 
         case 4:
           if (this.agent == null) {
-            this.agent = new com.cardif.avro.Agent();
+            this.agent = new com.schema.avro.Agent();
           }
           this.agent.customDecode(in);
           break;

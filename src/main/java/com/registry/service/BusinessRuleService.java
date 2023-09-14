@@ -42,7 +42,7 @@ public class BusinessRuleService implements MessagingPort<BusinessRule> {
 		Random rd = new Random();
 
 		var business = BusinessRule.newBuilder()
-				.setName(((BusinessRuleDTO) dto).getNome())
+//				.setName(((BusinessRuleDTO) dto).getNome())
 				.setRole(((BusinessRuleDTO) dto).getRole())
 				.build();
 		

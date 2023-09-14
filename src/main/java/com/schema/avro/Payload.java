@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Payload extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -3827490720833460470L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Payload\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"raw\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"},{\"type\":\"record\",\"name\":\"MasterPolicy\",\"fields\":[{\"name\":\"mp_no\",\"type\":\"long\"},{\"name\":\"mp_endors_no\",\"type\":\"int\"},{\"name\":\"mp_eff_dtm\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"mp_exp_dtm\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"partner\",\"type\":{\"type\":\"record\",\"name\":\"Partner\",\"fields\":[{\"name\":\"partner_id\",\"type\":\"long\"},{\"name\":\"partner_nm\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}},{\"name\":\"mp_ds\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mp_fantasy_nm\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mp_status\",\"type\":{\"type\":\"record\",\"name\":\"MpStatus\",\"fields\":[{\"name\":\"status_id\",\"type\":\"int\"},{\"name\":\"status_ds\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}},{\"name\":\"mp_unique_premium_fg\",\"type\":\"boolean\",\"default\":true},{\"name\":\"mp_min_vl\",\"type\":\"double\"},{\"name\":\"mp_max_vl\",\"type\":\"double\"},{\"name\":\"mp_family_no\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"mp_parent_no\",\"type\":\"long\"},{\"name\":\"broker\",\"type\":{\"type\":\"record\",\"name\":\"Broker\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"broker_nm\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mpbroker_cms_perc\",\"type\":\"double\"},{\"name\":\"mpbroker_cms_vl\",\"type\":\"double\"},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"id\",\"type\":\"long\"},{\"name\":\"agent_nm\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agent_social_sec_no\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mpbrokerag_cms_perc\",\"type\":\"double\"},{\"name\":\"mpbrokerag_cms_vl\",\"type\":[\"null\",\"double\"]}]}}]}},{\"name\":\"risks\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Risk\",\"fields\":[{\"name\":\"risk_id\",\"type\":\"long\"},{\"name\":\"risk_ds\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"coverages\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coverage\",\"fields\":[{\"name\":\"coverage_id\",\"type\":\"long\"},{\"name\":\"coverage_ds\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mpprc_basic_rsk_fg\",\"type\":\"boolean\",\"default\":false},{\"name\":\"mpprcp_max_indemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"plan_id\",\"type\":\"long\"},{\"name\":\"plan_ds\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"mpprcp_premium_vl\",\"type\":[\"null\",\"double\"]},{\"name\":\"mpprcp_premium_factor\",\"type\":[\"null\",\"double\"]}]}}}]}}}]}}},{\"name\":\"product\",\"type\":{\"type\":\"record\",\"name\":\"Product\",\"fields\":[{\"name\":\"product_id\",\"type\":\"int\"},{\"name\":\"prod_ds\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"prod_group\",\"type\":\"Product\"}]}}]}]}]}");
+  private static final long serialVersionUID = -1002354574193327640L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Payload\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"type\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"raw\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"},{\"type\":\"record\",\"name\":\"MasterPolicy\",\"fields\":[{\"name\":\"masterPolicyNumber\",\"type\":\"long\"},{\"name\":\"endorsementNumber\",\"type\":\"int\"},{\"name\":\"effectiveDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"expirationDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"partner\",\"type\":{\"type\":\"record\",\"name\":\"Partner\",\"fields\":[{\"name\":\"partnerId\",\"type\":\"long\"},{\"name\":\"partnerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}},{\"name\":\"masterPolicyDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"fantasyName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"status\",\"type\":{\"type\":\"record\",\"name\":\"MasterPolicyStatus\",\"fields\":[{\"name\":\"statusId\",\"type\":\"int\"},{\"name\":\"status\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}},{\"name\":\"isUniquePremium\",\"type\":\"boolean\",\"default\":true},{\"name\":\"minValue\",\"type\":\"double\"},{\"name\":\"maxValue\",\"type\":\"double\"},{\"name\":\"familyNumber\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"parentNumber\",\"type\":\"long\"},{\"name\":\"broker\",\"type\":{\"type\":\"record\",\"name\":\"Broker\",\"fields\":[{\"name\":\"brokerId\",\"type\":\"long\"},{\"name\":\"brokerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}}]}},{\"name\":\"risks\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Risk\",\"fields\":[{\"name\":\"RiskId\",\"type\":\"long\"},{\"name\":\"RiskDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"coverages\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coverage\",\"fields\":[{\"name\":\"coverageId\",\"type\":\"long\"},{\"name\":\"coverageDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"isBasicRisk\",\"type\":\"boolean\",\"default\":false},{\"name\":\"maxIndemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}}}]}}}]}}},{\"name\":\"product\",\"type\":{\"type\":\"record\",\"name\":\"Product\",\"fields\":[{\"name\":\"productId\",\"type\":\"int\"},{\"name\":\"productDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"group\",\"type\":{\"type\":\"record\",\"name\":\"Group\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}}]}}]}]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -139,8 +139,8 @@ static {
    * Creates a new Payload RecordBuilder.
    * @return A new Payload RecordBuilder
    */
-  public static com.cardif.avro.Payload.Builder newBuilder() {
-    return new com.cardif.avro.Payload.Builder();
+  public static com.schema.avro.Payload.Builder newBuilder() {
+    return new com.schema.avro.Payload.Builder();
   }
 
   /**
@@ -148,11 +148,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new Payload RecordBuilder
    */
-  public static com.cardif.avro.Payload.Builder newBuilder(com.cardif.avro.Payload.Builder other) {
+  public static com.schema.avro.Payload.Builder newBuilder(com.schema.avro.Payload.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Payload.Builder();
+      return new com.schema.avro.Payload.Builder();
     } else {
-      return new com.cardif.avro.Payload.Builder(other);
+      return new com.schema.avro.Payload.Builder(other);
     }
   }
 
@@ -161,11 +161,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new Payload RecordBuilder
    */
-  public static com.cardif.avro.Payload.Builder newBuilder(com.cardif.avro.Payload other) {
+  public static com.schema.avro.Payload.Builder newBuilder(com.schema.avro.Payload other) {
     if (other == null) {
-      return new com.cardif.avro.Payload.Builder();
+      return new com.schema.avro.Payload.Builder();
     } else {
-      return new com.cardif.avro.Payload.Builder(other);
+      return new com.schema.avro.Payload.Builder(other);
     }
   }
 
@@ -188,7 +188,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Payload.Builder other) {
+    private Builder(com.schema.avro.Payload.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.type)) {
         this.type = data().deepCopy(fields()[0].schema(), other.type);
@@ -204,7 +204,7 @@ static {
      * Creates a Builder by copying an existing Payload instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Payload other) {
+    private Builder(com.schema.avro.Payload other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.type)) {
         this.type = data().deepCopy(fields()[0].schema(), other.type);
@@ -230,7 +230,7 @@ static {
       * @param value The value of 'type'.
       * @return This builder.
       */
-    public com.cardif.avro.Payload.Builder setType(java.lang.String value) {
+    public com.schema.avro.Payload.Builder setType(java.lang.String value) {
       validate(fields()[0], value);
       this.type = value;
       fieldSetFlags()[0] = true;
@@ -250,7 +250,7 @@ static {
       * Clears the value of the 'type' field.
       * @return This builder.
       */
-    public com.cardif.avro.Payload.Builder clearType() {
+    public com.schema.avro.Payload.Builder clearType() {
       type = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -270,7 +270,7 @@ static {
       * @param value The value of 'raw'.
       * @return This builder.
       */
-    public com.cardif.avro.Payload.Builder setRaw(java.lang.Object value) {
+    public com.schema.avro.Payload.Builder setRaw(java.lang.Object value) {
       validate(fields()[1], value);
       this.raw = value;
       fieldSetFlags()[1] = true;
@@ -290,7 +290,7 @@ static {
       * Clears the value of the 'raw' field.
       * @return This builder.
       */
-    public com.cardif.avro.Payload.Builder clearRaw() {
+    public com.schema.avro.Payload.Builder clearRaw() {
       raw = null;
       fieldSetFlags()[1] = false;
       return this;

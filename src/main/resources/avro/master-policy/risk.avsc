@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "Risk",
   "fields": [
     { "name": "RiskId", "type": "long" },
@@ -8,7 +8,7 @@
     { "name": "coverages",
       "type": {
         "type": "array",
-        "items": "com.cardif.avro.Coverage"
+        "items": "com.schema.avro.Coverage"
       }
     }
   ]

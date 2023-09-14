@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Plan extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -3979699443495833576L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Plan\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}");
+  private static final long serialVersionUID = 1261949396228295863L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Plan\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -166,8 +166,8 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
    * Creates a new Plan RecordBuilder.
    * @return A new Plan RecordBuilder
    */
-  public static com.cardif.avro.Plan.Builder newBuilder() {
-    return new com.cardif.avro.Plan.Builder();
+  public static com.schema.avro.Plan.Builder newBuilder() {
+    return new com.schema.avro.Plan.Builder();
   }
 
   /**
@@ -175,11 +175,11 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing builder to copy.
    * @return A new Plan RecordBuilder
    */
-  public static com.cardif.avro.Plan.Builder newBuilder(com.cardif.avro.Plan.Builder other) {
+  public static com.schema.avro.Plan.Builder newBuilder(com.schema.avro.Plan.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Plan.Builder();
+      return new com.schema.avro.Plan.Builder();
     } else {
-      return new com.cardif.avro.Plan.Builder(other);
+      return new com.schema.avro.Plan.Builder(other);
     }
   }
 
@@ -188,11 +188,11 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
    * @param other The existing instance to copy.
    * @return A new Plan RecordBuilder
    */
-  public static com.cardif.avro.Plan.Builder newBuilder(com.cardif.avro.Plan other) {
+  public static com.schema.avro.Plan.Builder newBuilder(com.schema.avro.Plan other) {
     if (other == null) {
-      return new com.cardif.avro.Plan.Builder();
+      return new com.schema.avro.Plan.Builder();
     } else {
-      return new com.cardif.avro.Plan.Builder(other);
+      return new com.schema.avro.Plan.Builder(other);
     }
   }
 
@@ -217,7 +217,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Plan.Builder other) {
+    private Builder(com.schema.avro.Plan.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.planId)) {
         this.planId = data().deepCopy(fields()[0].schema(), other.planId);
@@ -241,7 +241,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
      * Creates a Builder by copying an existing Plan instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Plan other) {
+    private Builder(com.schema.avro.Plan other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.planId)) {
         this.planId = data().deepCopy(fields()[0].schema(), other.planId);
@@ -275,7 +275,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'planId'.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder setPlanId(long value) {
+    public com.schema.avro.Plan.Builder setPlanId(long value) {
       validate(fields()[0], value);
       this.planId = value;
       fieldSetFlags()[0] = true;
@@ -295,7 +295,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'planId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder clearPlanId() {
+    public com.schema.avro.Plan.Builder clearPlanId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -314,7 +314,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'planDescription'.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder setPlanDescription(java.lang.String value) {
+    public com.schema.avro.Plan.Builder setPlanDescription(java.lang.String value) {
       validate(fields()[1], value);
       this.planDescription = value;
       fieldSetFlags()[1] = true;
@@ -334,7 +334,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'planDescription' field.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder clearPlanDescription() {
+    public com.schema.avro.Plan.Builder clearPlanDescription() {
       planDescription = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -354,7 +354,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'valuePremium'.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder setValuePremium(java.lang.Double value) {
+    public com.schema.avro.Plan.Builder setValuePremium(java.lang.Double value) {
       validate(fields()[2], value);
       this.valuePremium = value;
       fieldSetFlags()[2] = true;
@@ -374,7 +374,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'valuePremium' field.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder clearValuePremium() {
+    public com.schema.avro.Plan.Builder clearValuePremium() {
       valuePremium = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -394,7 +394,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * @param value The value of 'factorPremium'.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder setFactorPremium(java.lang.Double value) {
+    public com.schema.avro.Plan.Builder setFactorPremium(java.lang.Double value) {
       validate(fields()[3], value);
       this.factorPremium = value;
       fieldSetFlags()[3] = true;
@@ -414,7 +414,7 @@ public class Plan extends org.apache.avro.specific.SpecificRecordBase implements
       * Clears the value of the 'factorPremium' field.
       * @return This builder.
       */
-    public com.cardif.avro.Plan.Builder clearFactorPremium() {
+    public com.schema.avro.Plan.Builder clearFactorPremium() {
       factorPremium = null;
       fieldSetFlags()[3] = false;
       return this;

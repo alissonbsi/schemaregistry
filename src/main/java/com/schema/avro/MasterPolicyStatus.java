@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 4711523424017489764L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterPolicyStatus\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"statusId\",\"type\":\"int\"},{\"name\":\"status\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}");
+  private static final long serialVersionUID = 4465408442470532952L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterPolicyStatus\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"statusId\",\"type\":\"int\"},{\"name\":\"status\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -72,7 +72,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
   }
 
    private int statusId;
-   private com.cardif.avro.Status status;
+   private com.schema.avro.Status status;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -86,7 +86,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
    * @param statusId The new value for statusId
    * @param status The new value for status
    */
-  public MasterPolicyStatus(java.lang.Integer statusId, com.cardif.avro.Status status) {
+  public MasterPolicyStatus(java.lang.Integer statusId, com.schema.avro.Status status) {
     this.statusId = statusId;
     this.status = status;
   }
@@ -107,7 +107,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: statusId = (java.lang.Integer)value$; break;
-    case 1: status = (com.cardif.avro.Status)value$; break;
+    case 1: status = (com.schema.avro.Status)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -126,7 +126,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
    * Gets the value of the 'status' field.
    * @return The value of the 'status' field.
    */
-  public com.cardif.avro.Status getStatus() {
+  public com.schema.avro.Status getStatus() {
     return status;
   }
 
@@ -136,8 +136,8 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
    * Creates a new MasterPolicyStatus RecordBuilder.
    * @return A new MasterPolicyStatus RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicyStatus.Builder newBuilder() {
-    return new com.cardif.avro.MasterPolicyStatus.Builder();
+  public static com.schema.avro.MasterPolicyStatus.Builder newBuilder() {
+    return new com.schema.avro.MasterPolicyStatus.Builder();
   }
 
   /**
@@ -145,11 +145,11 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
    * @param other The existing builder to copy.
    * @return A new MasterPolicyStatus RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicyStatus.Builder newBuilder(com.cardif.avro.MasterPolicyStatus.Builder other) {
+  public static com.schema.avro.MasterPolicyStatus.Builder newBuilder(com.schema.avro.MasterPolicyStatus.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.MasterPolicyStatus.Builder();
+      return new com.schema.avro.MasterPolicyStatus.Builder();
     } else {
-      return new com.cardif.avro.MasterPolicyStatus.Builder(other);
+      return new com.schema.avro.MasterPolicyStatus.Builder(other);
     }
   }
 
@@ -158,11 +158,11 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
    * @param other The existing instance to copy.
    * @return A new MasterPolicyStatus RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicyStatus.Builder newBuilder(com.cardif.avro.MasterPolicyStatus other) {
+  public static com.schema.avro.MasterPolicyStatus.Builder newBuilder(com.schema.avro.MasterPolicyStatus other) {
     if (other == null) {
-      return new com.cardif.avro.MasterPolicyStatus.Builder();
+      return new com.schema.avro.MasterPolicyStatus.Builder();
     } else {
-      return new com.cardif.avro.MasterPolicyStatus.Builder(other);
+      return new com.schema.avro.MasterPolicyStatus.Builder(other);
     }
   }
 
@@ -174,7 +174,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
     implements org.apache.avro.data.RecordBuilder<MasterPolicyStatus> {
 
     private int statusId;
-    private com.cardif.avro.Status status;
+    private com.schema.avro.Status status;
 
     /** Creates a new Builder */
     private Builder() {
@@ -185,7 +185,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.MasterPolicyStatus.Builder other) {
+    private Builder(com.schema.avro.MasterPolicyStatus.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.statusId)) {
         this.statusId = data().deepCopy(fields()[0].schema(), other.statusId);
@@ -201,7 +201,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
      * Creates a Builder by copying an existing MasterPolicyStatus instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.MasterPolicyStatus other) {
+    private Builder(com.schema.avro.MasterPolicyStatus other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.statusId)) {
         this.statusId = data().deepCopy(fields()[0].schema(), other.statusId);
@@ -227,7 +227,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'statusId'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicyStatus.Builder setStatusId(int value) {
+    public com.schema.avro.MasterPolicyStatus.Builder setStatusId(int value) {
       validate(fields()[0], value);
       this.statusId = value;
       fieldSetFlags()[0] = true;
@@ -247,7 +247,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'statusId' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicyStatus.Builder clearStatusId() {
+    public com.schema.avro.MasterPolicyStatus.Builder clearStatusId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -256,7 +256,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       * Gets the value of the 'status' field.
       * @return The value.
       */
-    public com.cardif.avro.Status getStatus() {
+    public com.schema.avro.Status getStatus() {
       return status;
     }
 
@@ -266,7 +266,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicyStatus.Builder setStatus(com.cardif.avro.Status value) {
+    public com.schema.avro.MasterPolicyStatus.Builder setStatus(com.schema.avro.Status value) {
       validate(fields()[1], value);
       this.status = value;
       fieldSetFlags()[1] = true;
@@ -286,7 +286,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       * Clears the value of the 'status' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicyStatus.Builder clearStatus() {
+    public com.schema.avro.MasterPolicyStatus.Builder clearStatus() {
       status = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -298,7 +298,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
       try {
         MasterPolicyStatus record = new MasterPolicyStatus();
         record.statusId = fieldSetFlags()[0] ? this.statusId : (java.lang.Integer) defaultValue(fields()[0]);
-        record.status = fieldSetFlags()[1] ? this.status : (com.cardif.avro.Status) defaultValue(fields()[1]);
+        record.status = fieldSetFlags()[1] ? this.status : (com.schema.avro.Status) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -344,7 +344,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
     if (fieldOrder == null) {
       this.statusId = in.readInt();
 
-      this.status = com.cardif.avro.Status.values()[in.readEnum()];
+      this.status = com.schema.avro.Status.values()[in.readEnum()];
 
     } else {
       for (int i = 0; i < 2; i++) {
@@ -354,7 +354,7 @@ public class MasterPolicyStatus extends org.apache.avro.specific.SpecificRecordB
           break;
 
         case 1:
-          this.status = com.cardif.avro.Status.values()[in.readEnum()];
+          this.status = com.schema.avro.Status.values()[in.readEnum()];
           break;
 
         default:

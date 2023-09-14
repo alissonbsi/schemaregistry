@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "Partner",
   "fields": [
     { "name": "partnerId", "type": "long" },

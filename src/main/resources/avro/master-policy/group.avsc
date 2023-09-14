@@ -1,10 +1,10 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "Group",
   "fields": [
     { "name": "groupId", "type": "int" },
     { "name": "groupDescription", "type": "string" },
-    { "name": "lineBusiness", "type": "com.cardif.avro.LineBusiness" }
+    { "name": "lineBusiness", "type": "com.schema.avro.LineBusiness" }
   ]
 }

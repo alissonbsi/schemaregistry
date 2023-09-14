@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "MasterPolicyStatus",
   "fields": [
     { "name": "statusId", "type": "int" },

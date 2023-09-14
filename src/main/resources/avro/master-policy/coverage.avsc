@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "Coverage",
   "fields": [
     { "name": "coverageId", "type": "long" },
@@ -10,7 +10,7 @@
     { "name": "plans",
       "type": {
         "type": "array",
-        "items": "com.cardif.avro.Plan"
+        "items": "com.schema.avro.Plan"
       }
     }
   ]

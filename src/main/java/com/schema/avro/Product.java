@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Product extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -7998133791174601380L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Product\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"productId\",\"type\":\"int\"},{\"name\":\"productDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"group\",\"type\":{\"type\":\"record\",\"name\":\"Group\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}}]}");
+  private static final long serialVersionUID = -7481263510697252692L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Product\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"productId\",\"type\":\"int\"},{\"name\":\"productDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"group\",\"type\":{\"type\":\"record\",\"name\":\"Group\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -73,7 +73,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
    private int productId;
    private java.lang.String productDescription;
-   private com.cardif.avro.Group group;
+   private com.schema.avro.Group group;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -88,7 +88,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param productDescription The new value for productDescription
    * @param group The new value for group
    */
-  public Product(java.lang.Integer productId, java.lang.String productDescription, com.cardif.avro.Group group) {
+  public Product(java.lang.Integer productId, java.lang.String productDescription, com.schema.avro.Group group) {
     this.productId = productId;
     this.productDescription = productDescription;
     this.group = group;
@@ -112,7 +112,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
     switch (field$) {
     case 0: productId = (java.lang.Integer)value$; break;
     case 1: productDescription = value$ != null ? value$.toString() : null; break;
-    case 2: group = (com.cardif.avro.Group)value$; break;
+    case 2: group = (com.schema.avro.Group)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -141,7 +141,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * Gets the value of the 'group' field.
    * @return The value of the 'group' field.
    */
-  public com.cardif.avro.Group getGroup() {
+  public com.schema.avro.Group getGroup() {
     return group;
   }
 
@@ -151,8 +151,8 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Product RecordBuilder.
    * @return A new Product RecordBuilder
    */
-  public static com.cardif.avro.Product.Builder newBuilder() {
-    return new com.cardif.avro.Product.Builder();
+  public static com.schema.avro.Product.Builder newBuilder() {
+    return new com.schema.avro.Product.Builder();
   }
 
   /**
@@ -160,11 +160,11 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Product RecordBuilder
    */
-  public static com.cardif.avro.Product.Builder newBuilder(com.cardif.avro.Product.Builder other) {
+  public static com.schema.avro.Product.Builder newBuilder(com.schema.avro.Product.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Product.Builder();
+      return new com.schema.avro.Product.Builder();
     } else {
-      return new com.cardif.avro.Product.Builder(other);
+      return new com.schema.avro.Product.Builder(other);
     }
   }
 
@@ -173,11 +173,11 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Product RecordBuilder
    */
-  public static com.cardif.avro.Product.Builder newBuilder(com.cardif.avro.Product other) {
+  public static com.schema.avro.Product.Builder newBuilder(com.schema.avro.Product other) {
     if (other == null) {
-      return new com.cardif.avro.Product.Builder();
+      return new com.schema.avro.Product.Builder();
     } else {
-      return new com.cardif.avro.Product.Builder(other);
+      return new com.schema.avro.Product.Builder(other);
     }
   }
 
@@ -190,8 +190,8 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
     private int productId;
     private java.lang.String productDescription;
-    private com.cardif.avro.Group group;
-    private com.cardif.avro.Group.Builder groupBuilder;
+    private com.schema.avro.Group group;
+    private com.schema.avro.Group.Builder groupBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -202,7 +202,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Product.Builder other) {
+    private Builder(com.schema.avro.Product.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.productId)) {
         this.productId = data().deepCopy(fields()[0].schema(), other.productId);
@@ -217,7 +217,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
       if (other.hasGroupBuilder()) {
-        this.groupBuilder = com.cardif.avro.Group.newBuilder(other.getGroupBuilder());
+        this.groupBuilder = com.schema.avro.Group.newBuilder(other.getGroupBuilder());
       }
     }
 
@@ -225,7 +225,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Product instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Product other) {
+    private Builder(com.schema.avro.Product other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.productId)) {
         this.productId = data().deepCopy(fields()[0].schema(), other.productId);
@@ -256,7 +256,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'productId'.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder setProductId(int value) {
+    public com.schema.avro.Product.Builder setProductId(int value) {
       validate(fields()[0], value);
       this.productId = value;
       fieldSetFlags()[0] = true;
@@ -276,7 +276,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'productId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder clearProductId() {
+    public com.schema.avro.Product.Builder clearProductId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -295,7 +295,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'productDescription'.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder setProductDescription(java.lang.String value) {
+    public com.schema.avro.Product.Builder setProductDescription(java.lang.String value) {
       validate(fields()[1], value);
       this.productDescription = value;
       fieldSetFlags()[1] = true;
@@ -315,7 +315,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'productDescription' field.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder clearProductDescription() {
+    public com.schema.avro.Product.Builder clearProductDescription() {
       productDescription = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -325,7 +325,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * Gets the value of the 'group' field.
       * @return The value.
       */
-    public com.cardif.avro.Group getGroup() {
+    public com.schema.avro.Group getGroup() {
       return group;
     }
 
@@ -335,7 +335,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'group'.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder setGroup(com.cardif.avro.Group value) {
+    public com.schema.avro.Product.Builder setGroup(com.schema.avro.Group value) {
       validate(fields()[2], value);
       this.groupBuilder = null;
       this.group = value;
@@ -355,12 +355,12 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
      * Gets the Builder instance for the 'group' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.Group.Builder getGroupBuilder() {
+    public com.schema.avro.Group.Builder getGroupBuilder() {
       if (groupBuilder == null) {
         if (hasGroup()) {
-          setGroupBuilder(com.cardif.avro.Group.newBuilder(group));
+          setGroupBuilder(com.schema.avro.Group.newBuilder(group));
         } else {
-          setGroupBuilder(com.cardif.avro.Group.newBuilder());
+          setGroupBuilder(com.schema.avro.Group.newBuilder());
         }
       }
       return groupBuilder;
@@ -372,7 +372,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
      * @return This builder.
      */
 
-    public com.cardif.avro.Product.Builder setGroupBuilder(com.cardif.avro.Group.Builder value) {
+    public com.schema.avro.Product.Builder setGroupBuilder(com.schema.avro.Group.Builder value) {
       clearGroup();
       groupBuilder = value;
       return this;
@@ -390,7 +390,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'group' field.
       * @return This builder.
       */
-    public com.cardif.avro.Product.Builder clearGroup() {
+    public com.schema.avro.Product.Builder clearGroup() {
       group = null;
       groupBuilder = null;
       fieldSetFlags()[2] = false;
@@ -412,7 +412,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
             throw e;
           }
         } else {
-          record.group = fieldSetFlags()[2] ? this.group : (com.cardif.avro.Group) defaultValue(fields()[2]);
+          record.group = fieldSetFlags()[2] ? this.group : (com.schema.avro.Group) defaultValue(fields()[2]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -464,7 +464,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       this.productDescription = in.readString();
 
       if (this.group == null) {
-        this.group = new com.cardif.avro.Group();
+        this.group = new com.schema.avro.Group();
       }
       this.group.customDecode(in);
 
@@ -481,7 +481,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
         case 2:
           if (this.group == null) {
-            this.group = new com.cardif.avro.Group();
+            this.group = new com.schema.avro.Group();
           }
           this.group.customDecode(in);
           break;

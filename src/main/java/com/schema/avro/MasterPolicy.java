@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class MasterPolicy extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2023641435053289140L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterPolicy\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"masterPolicyNumber\",\"type\":\"long\"},{\"name\":\"endorsementNumber\",\"type\":\"int\"},{\"name\":\"effectiveDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"expirationDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"partner\",\"type\":{\"type\":\"record\",\"name\":\"Partner\",\"fields\":[{\"name\":\"partnerId\",\"type\":\"long\"},{\"name\":\"partnerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}},{\"name\":\"masterPolicyDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"fantasyName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"status\",\"type\":{\"type\":\"record\",\"name\":\"MasterPolicyStatus\",\"fields\":[{\"name\":\"statusId\",\"type\":\"int\"},{\"name\":\"status\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}},{\"name\":\"isUniquePremium\",\"type\":\"boolean\",\"default\":true},{\"name\":\"minValue\",\"type\":\"double\"},{\"name\":\"maxValue\",\"type\":\"double\"},{\"name\":\"familyNumber\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"parentNumber\",\"type\":\"long\"},{\"name\":\"broker\",\"type\":{\"type\":\"record\",\"name\":\"Broker\",\"fields\":[{\"name\":\"brokerId\",\"type\":\"long\"},{\"name\":\"brokerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}}]}},{\"name\":\"risks\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Risk\",\"fields\":[{\"name\":\"RiskId\",\"type\":\"long\"},{\"name\":\"RiskDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"coverages\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coverage\",\"fields\":[{\"name\":\"coverageId\",\"type\":\"long\"},{\"name\":\"coverageDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"isBasicRisk\",\"type\":\"boolean\",\"default\":false},{\"name\":\"maxIndemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}}}]}}}]}}},{\"name\":\"product\",\"type\":{\"type\":\"record\",\"name\":\"Product\",\"fields\":[{\"name\":\"productId\",\"type\":\"int\"},{\"name\":\"productDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"group\",\"type\":{\"type\":\"record\",\"name\":\"Group\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}}]}}]}");
+  private static final long serialVersionUID = -351182065521862499L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"MasterPolicy\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"masterPolicyNumber\",\"type\":\"long\"},{\"name\":\"endorsementNumber\",\"type\":\"int\"},{\"name\":\"effectiveDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"expirationDate\",\"type\":{\"type\":\"int\",\"logicalType\":\"time-millis\"}},{\"name\":\"partner\",\"type\":{\"type\":\"record\",\"name\":\"Partner\",\"fields\":[{\"name\":\"partnerId\",\"type\":\"long\"},{\"name\":\"partnerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}},{\"name\":\"masterPolicyDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"fantasyName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"status\",\"type\":{\"type\":\"record\",\"name\":\"MasterPolicyStatus\",\"fields\":[{\"name\":\"statusId\",\"type\":\"int\"},{\"name\":\"status\",\"type\":{\"type\":\"enum\",\"name\":\"Status\",\"symbols\":[\"ATIVO\",\"CANCELADO\",\"NAO_EFETIVADO\",\"EM_NEGOCIACAO\",\"PEND_ATIVACAO\"]}}]}},{\"name\":\"isUniquePremium\",\"type\":\"boolean\",\"default\":true},{\"name\":\"minValue\",\"type\":\"double\"},{\"name\":\"maxValue\",\"type\":\"double\"},{\"name\":\"familyNumber\",\"type\":[\"null\",{\"type\":\"string\",\"avro.java.string\":\"String\"}]},{\"name\":\"parentNumber\",\"type\":\"long\"},{\"name\":\"broker\",\"type\":{\"type\":\"record\",\"name\":\"Broker\",\"fields\":[{\"name\":\"brokerId\",\"type\":\"long\"},{\"name\":\"brokerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]},{\"name\":\"agent\",\"type\":{\"type\":\"record\",\"name\":\"Agent\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}}]}},{\"name\":\"risks\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Risk\",\"fields\":[{\"name\":\"RiskId\",\"type\":\"long\"},{\"name\":\"RiskDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"coverages\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Coverage\",\"fields\":[{\"name\":\"coverageId\",\"type\":\"long\"},{\"name\":\"coverageDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"isBasicRisk\",\"type\":\"boolean\",\"default\":false},{\"name\":\"maxIndemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}}}]}}}]}}},{\"name\":\"product\",\"type\":{\"type\":\"record\",\"name\":\"Product\",\"fields\":[{\"name\":\"productId\",\"type\":\"int\"},{\"name\":\"productDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"group\",\"type\":{\"type\":\"record\",\"name\":\"Group\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -78,18 +78,18 @@ static {
    private int endorsementNumber;
    private java.time.LocalTime effectiveDate;
    private java.time.LocalTime expirationDate;
-   private com.cardif.avro.Partner partner;
+   private com.schema.avro.Partner partner;
    private java.lang.String masterPolicyDescription;
    private java.lang.String fantasyName;
-   private com.cardif.avro.MasterPolicyStatus status;
+   private com.schema.avro.MasterPolicyStatus status;
    private boolean isUniquePremium;
    private double minValue;
    private double maxValue;
    private java.lang.String familyNumber;
    private long parentNumber;
-   private com.cardif.avro.Broker broker;
-   private java.util.List<com.cardif.avro.Risk> risks;
-   private com.cardif.avro.Product product;
+   private com.schema.avro.Broker broker;
+   private java.util.List<com.schema.avro.Risk> risks;
+   private com.schema.avro.Product product;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -117,7 +117,7 @@ static {
    * @param risks The new value for risks
    * @param product The new value for product
    */
-  public MasterPolicy(java.lang.Long masterPolicyNumber, java.lang.Integer endorsementNumber, java.time.LocalTime effectiveDate, java.time.LocalTime expirationDate, com.cardif.avro.Partner partner, java.lang.String masterPolicyDescription, java.lang.String fantasyName, com.cardif.avro.MasterPolicyStatus status, java.lang.Boolean isUniquePremium, java.lang.Double minValue, java.lang.Double maxValue, java.lang.String familyNumber, java.lang.Long parentNumber, com.cardif.avro.Broker broker, java.util.List<com.cardif.avro.Risk> risks, com.cardif.avro.Product product) {
+  public MasterPolicy(java.lang.Long masterPolicyNumber, java.lang.Integer endorsementNumber, java.time.LocalTime effectiveDate, java.time.LocalTime expirationDate, com.schema.avro.Partner partner, java.lang.String masterPolicyDescription, java.lang.String fantasyName, com.schema.avro.MasterPolicyStatus status, java.lang.Boolean isUniquePremium, java.lang.Double minValue, java.lang.Double maxValue, java.lang.String familyNumber, java.lang.Long parentNumber, com.schema.avro.Broker broker, java.util.List<com.schema.avro.Risk> risks, com.schema.avro.Product product) {
     this.masterPolicyNumber = masterPolicyNumber;
     this.endorsementNumber = endorsementNumber;
     this.effectiveDate = effectiveDate.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
@@ -195,18 +195,18 @@ static {
     case 1: endorsementNumber = (java.lang.Integer)value$; break;
     case 2: effectiveDate = (java.time.LocalTime)value$; break;
     case 3: expirationDate = (java.time.LocalTime)value$; break;
-    case 4: partner = (com.cardif.avro.Partner)value$; break;
+    case 4: partner = (com.schema.avro.Partner)value$; break;
     case 5: masterPolicyDescription = value$ != null ? value$.toString() : null; break;
     case 6: fantasyName = value$ != null ? value$.toString() : null; break;
-    case 7: status = (com.cardif.avro.MasterPolicyStatus)value$; break;
+    case 7: status = (com.schema.avro.MasterPolicyStatus)value$; break;
     case 8: isUniquePremium = (java.lang.Boolean)value$; break;
     case 9: minValue = (java.lang.Double)value$; break;
     case 10: maxValue = (java.lang.Double)value$; break;
     case 11: familyNumber = value$ != null ? value$.toString() : null; break;
     case 12: parentNumber = (java.lang.Long)value$; break;
-    case 13: broker = (com.cardif.avro.Broker)value$; break;
-    case 14: risks = (java.util.List<com.cardif.avro.Risk>)value$; break;
-    case 15: product = (com.cardif.avro.Product)value$; break;
+    case 13: broker = (com.schema.avro.Broker)value$; break;
+    case 14: risks = (java.util.List<com.schema.avro.Risk>)value$; break;
+    case 15: product = (com.schema.avro.Product)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -255,7 +255,7 @@ static {
    * Gets the value of the 'partner' field.
    * @return The value of the 'partner' field.
    */
-  public com.cardif.avro.Partner getPartner() {
+  public com.schema.avro.Partner getPartner() {
     return partner;
   }
 
@@ -285,7 +285,7 @@ static {
    * Gets the value of the 'status' field.
    * @return The value of the 'status' field.
    */
-  public com.cardif.avro.MasterPolicyStatus getStatus() {
+  public com.schema.avro.MasterPolicyStatus getStatus() {
     return status;
   }
 
@@ -345,7 +345,7 @@ static {
    * Gets the value of the 'broker' field.
    * @return The value of the 'broker' field.
    */
-  public com.cardif.avro.Broker getBroker() {
+  public com.schema.avro.Broker getBroker() {
     return broker;
   }
 
@@ -355,7 +355,7 @@ static {
    * Gets the value of the 'risks' field.
    * @return The value of the 'risks' field.
    */
-  public java.util.List<com.cardif.avro.Risk> getRisks() {
+  public java.util.List<com.schema.avro.Risk> getRisks() {
     return risks;
   }
 
@@ -365,7 +365,7 @@ static {
    * Gets the value of the 'product' field.
    * @return The value of the 'product' field.
    */
-  public com.cardif.avro.Product getProduct() {
+  public com.schema.avro.Product getProduct() {
     return product;
   }
 
@@ -375,8 +375,8 @@ static {
    * Creates a new MasterPolicy RecordBuilder.
    * @return A new MasterPolicy RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicy.Builder newBuilder() {
-    return new com.cardif.avro.MasterPolicy.Builder();
+  public static com.schema.avro.MasterPolicy.Builder newBuilder() {
+    return new com.schema.avro.MasterPolicy.Builder();
   }
 
   /**
@@ -384,11 +384,11 @@ static {
    * @param other The existing builder to copy.
    * @return A new MasterPolicy RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicy.Builder newBuilder(com.cardif.avro.MasterPolicy.Builder other) {
+  public static com.schema.avro.MasterPolicy.Builder newBuilder(com.schema.avro.MasterPolicy.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.MasterPolicy.Builder();
+      return new com.schema.avro.MasterPolicy.Builder();
     } else {
-      return new com.cardif.avro.MasterPolicy.Builder(other);
+      return new com.schema.avro.MasterPolicy.Builder(other);
     }
   }
 
@@ -397,11 +397,11 @@ static {
    * @param other The existing instance to copy.
    * @return A new MasterPolicy RecordBuilder
    */
-  public static com.cardif.avro.MasterPolicy.Builder newBuilder(com.cardif.avro.MasterPolicy other) {
+  public static com.schema.avro.MasterPolicy.Builder newBuilder(com.schema.avro.MasterPolicy other) {
     if (other == null) {
-      return new com.cardif.avro.MasterPolicy.Builder();
+      return new com.schema.avro.MasterPolicy.Builder();
     } else {
-      return new com.cardif.avro.MasterPolicy.Builder(other);
+      return new com.schema.avro.MasterPolicy.Builder(other);
     }
   }
 
@@ -416,22 +416,22 @@ static {
     private int endorsementNumber;
     private java.time.LocalTime effectiveDate;
     private java.time.LocalTime expirationDate;
-    private com.cardif.avro.Partner partner;
-    private com.cardif.avro.Partner.Builder partnerBuilder;
+    private com.schema.avro.Partner partner;
+    private com.schema.avro.Partner.Builder partnerBuilder;
     private java.lang.String masterPolicyDescription;
     private java.lang.String fantasyName;
-    private com.cardif.avro.MasterPolicyStatus status;
-    private com.cardif.avro.MasterPolicyStatus.Builder statusBuilder;
+    private com.schema.avro.MasterPolicyStatus status;
+    private com.schema.avro.MasterPolicyStatus.Builder statusBuilder;
     private boolean isUniquePremium;
     private double minValue;
     private double maxValue;
     private java.lang.String familyNumber;
     private long parentNumber;
-    private com.cardif.avro.Broker broker;
-    private com.cardif.avro.Broker.Builder brokerBuilder;
-    private java.util.List<com.cardif.avro.Risk> risks;
-    private com.cardif.avro.Product product;
-    private com.cardif.avro.Product.Builder productBuilder;
+    private com.schema.avro.Broker broker;
+    private com.schema.avro.Broker.Builder brokerBuilder;
+    private java.util.List<com.schema.avro.Risk> risks;
+    private com.schema.avro.Product product;
+    private com.schema.avro.Product.Builder productBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -442,7 +442,7 @@ static {
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.MasterPolicy.Builder other) {
+    private Builder(com.schema.avro.MasterPolicy.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.masterPolicyNumber)) {
         this.masterPolicyNumber = data().deepCopy(fields()[0].schema(), other.masterPolicyNumber);
@@ -465,7 +465,7 @@ static {
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasPartnerBuilder()) {
-        this.partnerBuilder = com.cardif.avro.Partner.newBuilder(other.getPartnerBuilder());
+        this.partnerBuilder = com.schema.avro.Partner.newBuilder(other.getPartnerBuilder());
       }
       if (isValidValue(fields()[5], other.masterPolicyDescription)) {
         this.masterPolicyDescription = data().deepCopy(fields()[5].schema(), other.masterPolicyDescription);
@@ -480,7 +480,7 @@ static {
         fieldSetFlags()[7] = other.fieldSetFlags()[7];
       }
       if (other.hasStatusBuilder()) {
-        this.statusBuilder = com.cardif.avro.MasterPolicyStatus.newBuilder(other.getStatusBuilder());
+        this.statusBuilder = com.schema.avro.MasterPolicyStatus.newBuilder(other.getStatusBuilder());
       }
       if (isValidValue(fields()[8], other.isUniquePremium)) {
         this.isUniquePremium = data().deepCopy(fields()[8].schema(), other.isUniquePremium);
@@ -507,7 +507,7 @@ static {
         fieldSetFlags()[13] = other.fieldSetFlags()[13];
       }
       if (other.hasBrokerBuilder()) {
-        this.brokerBuilder = com.cardif.avro.Broker.newBuilder(other.getBrokerBuilder());
+        this.brokerBuilder = com.schema.avro.Broker.newBuilder(other.getBrokerBuilder());
       }
       if (isValidValue(fields()[14], other.risks)) {
         this.risks = data().deepCopy(fields()[14].schema(), other.risks);
@@ -518,7 +518,7 @@ static {
         fieldSetFlags()[15] = other.fieldSetFlags()[15];
       }
       if (other.hasProductBuilder()) {
-        this.productBuilder = com.cardif.avro.Product.newBuilder(other.getProductBuilder());
+        this.productBuilder = com.schema.avro.Product.newBuilder(other.getProductBuilder());
       }
     }
 
@@ -526,7 +526,7 @@ static {
      * Creates a Builder by copying an existing MasterPolicy instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.MasterPolicy other) {
+    private Builder(com.schema.avro.MasterPolicy other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.masterPolicyNumber)) {
         this.masterPolicyNumber = data().deepCopy(fields()[0].schema(), other.masterPolicyNumber);
@@ -612,7 +612,7 @@ static {
       * @param value The value of 'masterPolicyNumber'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setMasterPolicyNumber(long value) {
+    public com.schema.avro.MasterPolicy.Builder setMasterPolicyNumber(long value) {
       validate(fields()[0], value);
       this.masterPolicyNumber = value;
       fieldSetFlags()[0] = true;
@@ -632,7 +632,7 @@ static {
       * Clears the value of the 'masterPolicyNumber' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearMasterPolicyNumber() {
+    public com.schema.avro.MasterPolicy.Builder clearMasterPolicyNumber() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -651,7 +651,7 @@ static {
       * @param value The value of 'endorsementNumber'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setEndorsementNumber(int value) {
+    public com.schema.avro.MasterPolicy.Builder setEndorsementNumber(int value) {
       validate(fields()[1], value);
       this.endorsementNumber = value;
       fieldSetFlags()[1] = true;
@@ -671,7 +671,7 @@ static {
       * Clears the value of the 'endorsementNumber' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearEndorsementNumber() {
+    public com.schema.avro.MasterPolicy.Builder clearEndorsementNumber() {
       fieldSetFlags()[1] = false;
       return this;
     }
@@ -690,7 +690,7 @@ static {
       * @param value The value of 'effectiveDate'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setEffectiveDate(java.time.LocalTime value) {
+    public com.schema.avro.MasterPolicy.Builder setEffectiveDate(java.time.LocalTime value) {
       validate(fields()[2], value);
       this.effectiveDate = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[2] = true;
@@ -710,7 +710,7 @@ static {
       * Clears the value of the 'effectiveDate' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearEffectiveDate() {
+    public com.schema.avro.MasterPolicy.Builder clearEffectiveDate() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -729,7 +729,7 @@ static {
       * @param value The value of 'expirationDate'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setExpirationDate(java.time.LocalTime value) {
+    public com.schema.avro.MasterPolicy.Builder setExpirationDate(java.time.LocalTime value) {
       validate(fields()[3], value);
       this.expirationDate = value.truncatedTo(java.time.temporal.ChronoUnit.MILLIS);
       fieldSetFlags()[3] = true;
@@ -749,7 +749,7 @@ static {
       * Clears the value of the 'expirationDate' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearExpirationDate() {
+    public com.schema.avro.MasterPolicy.Builder clearExpirationDate() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -758,7 +758,7 @@ static {
       * Gets the value of the 'partner' field.
       * @return The value.
       */
-    public com.cardif.avro.Partner getPartner() {
+    public com.schema.avro.Partner getPartner() {
       return partner;
     }
 
@@ -768,7 +768,7 @@ static {
       * @param value The value of 'partner'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setPartner(com.cardif.avro.Partner value) {
+    public com.schema.avro.MasterPolicy.Builder setPartner(com.schema.avro.Partner value) {
       validate(fields()[4], value);
       this.partnerBuilder = null;
       this.partner = value;
@@ -788,12 +788,12 @@ static {
      * Gets the Builder instance for the 'partner' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.Partner.Builder getPartnerBuilder() {
+    public com.schema.avro.Partner.Builder getPartnerBuilder() {
       if (partnerBuilder == null) {
         if (hasPartner()) {
-          setPartnerBuilder(com.cardif.avro.Partner.newBuilder(partner));
+          setPartnerBuilder(com.schema.avro.Partner.newBuilder(partner));
         } else {
-          setPartnerBuilder(com.cardif.avro.Partner.newBuilder());
+          setPartnerBuilder(com.schema.avro.Partner.newBuilder());
         }
       }
       return partnerBuilder;
@@ -805,7 +805,7 @@ static {
      * @return This builder.
      */
 
-    public com.cardif.avro.MasterPolicy.Builder setPartnerBuilder(com.cardif.avro.Partner.Builder value) {
+    public com.schema.avro.MasterPolicy.Builder setPartnerBuilder(com.schema.avro.Partner.Builder value) {
       clearPartner();
       partnerBuilder = value;
       return this;
@@ -823,7 +823,7 @@ static {
       * Clears the value of the 'partner' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearPartner() {
+    public com.schema.avro.MasterPolicy.Builder clearPartner() {
       partner = null;
       partnerBuilder = null;
       fieldSetFlags()[4] = false;
@@ -844,7 +844,7 @@ static {
       * @param value The value of 'masterPolicyDescription'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setMasterPolicyDescription(java.lang.String value) {
+    public com.schema.avro.MasterPolicy.Builder setMasterPolicyDescription(java.lang.String value) {
       validate(fields()[5], value);
       this.masterPolicyDescription = value;
       fieldSetFlags()[5] = true;
@@ -864,7 +864,7 @@ static {
       * Clears the value of the 'masterPolicyDescription' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearMasterPolicyDescription() {
+    public com.schema.avro.MasterPolicy.Builder clearMasterPolicyDescription() {
       masterPolicyDescription = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -884,7 +884,7 @@ static {
       * @param value The value of 'fantasyName'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setFantasyName(java.lang.String value) {
+    public com.schema.avro.MasterPolicy.Builder setFantasyName(java.lang.String value) {
       validate(fields()[6], value);
       this.fantasyName = value;
       fieldSetFlags()[6] = true;
@@ -904,7 +904,7 @@ static {
       * Clears the value of the 'fantasyName' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearFantasyName() {
+    public com.schema.avro.MasterPolicy.Builder clearFantasyName() {
       fantasyName = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -914,7 +914,7 @@ static {
       * Gets the value of the 'status' field.
       * @return The value.
       */
-    public com.cardif.avro.MasterPolicyStatus getStatus() {
+    public com.schema.avro.MasterPolicyStatus getStatus() {
       return status;
     }
 
@@ -924,7 +924,7 @@ static {
       * @param value The value of 'status'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setStatus(com.cardif.avro.MasterPolicyStatus value) {
+    public com.schema.avro.MasterPolicy.Builder setStatus(com.schema.avro.MasterPolicyStatus value) {
       validate(fields()[7], value);
       this.statusBuilder = null;
       this.status = value;
@@ -944,12 +944,12 @@ static {
      * Gets the Builder instance for the 'status' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.MasterPolicyStatus.Builder getStatusBuilder() {
+    public com.schema.avro.MasterPolicyStatus.Builder getStatusBuilder() {
       if (statusBuilder == null) {
         if (hasStatus()) {
-          setStatusBuilder(com.cardif.avro.MasterPolicyStatus.newBuilder(status));
+          setStatusBuilder(com.schema.avro.MasterPolicyStatus.newBuilder(status));
         } else {
-          setStatusBuilder(com.cardif.avro.MasterPolicyStatus.newBuilder());
+          setStatusBuilder(com.schema.avro.MasterPolicyStatus.newBuilder());
         }
       }
       return statusBuilder;
@@ -961,7 +961,7 @@ static {
      * @return This builder.
      */
 
-    public com.cardif.avro.MasterPolicy.Builder setStatusBuilder(com.cardif.avro.MasterPolicyStatus.Builder value) {
+    public com.schema.avro.MasterPolicy.Builder setStatusBuilder(com.schema.avro.MasterPolicyStatus.Builder value) {
       clearStatus();
       statusBuilder = value;
       return this;
@@ -979,7 +979,7 @@ static {
       * Clears the value of the 'status' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearStatus() {
+    public com.schema.avro.MasterPolicy.Builder clearStatus() {
       status = null;
       statusBuilder = null;
       fieldSetFlags()[7] = false;
@@ -1000,7 +1000,7 @@ static {
       * @param value The value of 'isUniquePremium'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setIsUniquePremium(boolean value) {
+    public com.schema.avro.MasterPolicy.Builder setIsUniquePremium(boolean value) {
       validate(fields()[8], value);
       this.isUniquePremium = value;
       fieldSetFlags()[8] = true;
@@ -1020,7 +1020,7 @@ static {
       * Clears the value of the 'isUniquePremium' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearIsUniquePremium() {
+    public com.schema.avro.MasterPolicy.Builder clearIsUniquePremium() {
       fieldSetFlags()[8] = false;
       return this;
     }
@@ -1039,7 +1039,7 @@ static {
       * @param value The value of 'minValue'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setMinValue(double value) {
+    public com.schema.avro.MasterPolicy.Builder setMinValue(double value) {
       validate(fields()[9], value);
       this.minValue = value;
       fieldSetFlags()[9] = true;
@@ -1059,7 +1059,7 @@ static {
       * Clears the value of the 'minValue' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearMinValue() {
+    public com.schema.avro.MasterPolicy.Builder clearMinValue() {
       fieldSetFlags()[9] = false;
       return this;
     }
@@ -1078,7 +1078,7 @@ static {
       * @param value The value of 'maxValue'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setMaxValue(double value) {
+    public com.schema.avro.MasterPolicy.Builder setMaxValue(double value) {
       validate(fields()[10], value);
       this.maxValue = value;
       fieldSetFlags()[10] = true;
@@ -1098,7 +1098,7 @@ static {
       * Clears the value of the 'maxValue' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearMaxValue() {
+    public com.schema.avro.MasterPolicy.Builder clearMaxValue() {
       fieldSetFlags()[10] = false;
       return this;
     }
@@ -1117,7 +1117,7 @@ static {
       * @param value The value of 'familyNumber'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setFamilyNumber(java.lang.String value) {
+    public com.schema.avro.MasterPolicy.Builder setFamilyNumber(java.lang.String value) {
       validate(fields()[11], value);
       this.familyNumber = value;
       fieldSetFlags()[11] = true;
@@ -1137,7 +1137,7 @@ static {
       * Clears the value of the 'familyNumber' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearFamilyNumber() {
+    public com.schema.avro.MasterPolicy.Builder clearFamilyNumber() {
       familyNumber = null;
       fieldSetFlags()[11] = false;
       return this;
@@ -1157,7 +1157,7 @@ static {
       * @param value The value of 'parentNumber'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setParentNumber(long value) {
+    public com.schema.avro.MasterPolicy.Builder setParentNumber(long value) {
       validate(fields()[12], value);
       this.parentNumber = value;
       fieldSetFlags()[12] = true;
@@ -1177,7 +1177,7 @@ static {
       * Clears the value of the 'parentNumber' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearParentNumber() {
+    public com.schema.avro.MasterPolicy.Builder clearParentNumber() {
       fieldSetFlags()[12] = false;
       return this;
     }
@@ -1186,7 +1186,7 @@ static {
       * Gets the value of the 'broker' field.
       * @return The value.
       */
-    public com.cardif.avro.Broker getBroker() {
+    public com.schema.avro.Broker getBroker() {
       return broker;
     }
 
@@ -1196,7 +1196,7 @@ static {
       * @param value The value of 'broker'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setBroker(com.cardif.avro.Broker value) {
+    public com.schema.avro.MasterPolicy.Builder setBroker(com.schema.avro.Broker value) {
       validate(fields()[13], value);
       this.brokerBuilder = null;
       this.broker = value;
@@ -1216,12 +1216,12 @@ static {
      * Gets the Builder instance for the 'broker' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.Broker.Builder getBrokerBuilder() {
+    public com.schema.avro.Broker.Builder getBrokerBuilder() {
       if (brokerBuilder == null) {
         if (hasBroker()) {
-          setBrokerBuilder(com.cardif.avro.Broker.newBuilder(broker));
+          setBrokerBuilder(com.schema.avro.Broker.newBuilder(broker));
         } else {
-          setBrokerBuilder(com.cardif.avro.Broker.newBuilder());
+          setBrokerBuilder(com.schema.avro.Broker.newBuilder());
         }
       }
       return brokerBuilder;
@@ -1233,7 +1233,7 @@ static {
      * @return This builder.
      */
 
-    public com.cardif.avro.MasterPolicy.Builder setBrokerBuilder(com.cardif.avro.Broker.Builder value) {
+    public com.schema.avro.MasterPolicy.Builder setBrokerBuilder(com.schema.avro.Broker.Builder value) {
       clearBroker();
       brokerBuilder = value;
       return this;
@@ -1251,7 +1251,7 @@ static {
       * Clears the value of the 'broker' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearBroker() {
+    public com.schema.avro.MasterPolicy.Builder clearBroker() {
       broker = null;
       brokerBuilder = null;
       fieldSetFlags()[13] = false;
@@ -1262,7 +1262,7 @@ static {
       * Gets the value of the 'risks' field.
       * @return The value.
       */
-    public java.util.List<com.cardif.avro.Risk> getRisks() {
+    public java.util.List<com.schema.avro.Risk> getRisks() {
       return risks;
     }
 
@@ -1272,7 +1272,7 @@ static {
       * @param value The value of 'risks'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setRisks(java.util.List<com.cardif.avro.Risk> value) {
+    public com.schema.avro.MasterPolicy.Builder setRisks(java.util.List<com.schema.avro.Risk> value) {
       validate(fields()[14], value);
       this.risks = value;
       fieldSetFlags()[14] = true;
@@ -1292,7 +1292,7 @@ static {
       * Clears the value of the 'risks' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearRisks() {
+    public com.schema.avro.MasterPolicy.Builder clearRisks() {
       risks = null;
       fieldSetFlags()[14] = false;
       return this;
@@ -1302,7 +1302,7 @@ static {
       * Gets the value of the 'product' field.
       * @return The value.
       */
-    public com.cardif.avro.Product getProduct() {
+    public com.schema.avro.Product getProduct() {
       return product;
     }
 
@@ -1312,7 +1312,7 @@ static {
       * @param value The value of 'product'.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder setProduct(com.cardif.avro.Product value) {
+    public com.schema.avro.MasterPolicy.Builder setProduct(com.schema.avro.Product value) {
       validate(fields()[15], value);
       this.productBuilder = null;
       this.product = value;
@@ -1332,12 +1332,12 @@ static {
      * Gets the Builder instance for the 'product' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.Product.Builder getProductBuilder() {
+    public com.schema.avro.Product.Builder getProductBuilder() {
       if (productBuilder == null) {
         if (hasProduct()) {
-          setProductBuilder(com.cardif.avro.Product.newBuilder(product));
+          setProductBuilder(com.schema.avro.Product.newBuilder(product));
         } else {
-          setProductBuilder(com.cardif.avro.Product.newBuilder());
+          setProductBuilder(com.schema.avro.Product.newBuilder());
         }
       }
       return productBuilder;
@@ -1349,7 +1349,7 @@ static {
      * @return This builder.
      */
 
-    public com.cardif.avro.MasterPolicy.Builder setProductBuilder(com.cardif.avro.Product.Builder value) {
+    public com.schema.avro.MasterPolicy.Builder setProductBuilder(com.schema.avro.Product.Builder value) {
       clearProduct();
       productBuilder = value;
       return this;
@@ -1367,7 +1367,7 @@ static {
       * Clears the value of the 'product' field.
       * @return This builder.
       */
-    public com.cardif.avro.MasterPolicy.Builder clearProduct() {
+    public com.schema.avro.MasterPolicy.Builder clearProduct() {
       product = null;
       productBuilder = null;
       fieldSetFlags()[15] = false;
@@ -1391,7 +1391,7 @@ static {
             throw e;
           }
         } else {
-          record.partner = fieldSetFlags()[4] ? this.partner : (com.cardif.avro.Partner) defaultValue(fields()[4]);
+          record.partner = fieldSetFlags()[4] ? this.partner : (com.schema.avro.Partner) defaultValue(fields()[4]);
         }
         record.masterPolicyDescription = fieldSetFlags()[5] ? this.masterPolicyDescription : (java.lang.String) defaultValue(fields()[5]);
         record.fantasyName = fieldSetFlags()[6] ? this.fantasyName : (java.lang.String) defaultValue(fields()[6]);
@@ -1403,7 +1403,7 @@ static {
             throw e;
           }
         } else {
-          record.status = fieldSetFlags()[7] ? this.status : (com.cardif.avro.MasterPolicyStatus) defaultValue(fields()[7]);
+          record.status = fieldSetFlags()[7] ? this.status : (com.schema.avro.MasterPolicyStatus) defaultValue(fields()[7]);
         }
         record.isUniquePremium = fieldSetFlags()[8] ? this.isUniquePremium : (java.lang.Boolean) defaultValue(fields()[8]);
         record.minValue = fieldSetFlags()[9] ? this.minValue : (java.lang.Double) defaultValue(fields()[9]);
@@ -1418,9 +1418,9 @@ static {
             throw e;
           }
         } else {
-          record.broker = fieldSetFlags()[13] ? this.broker : (com.cardif.avro.Broker) defaultValue(fields()[13]);
+          record.broker = fieldSetFlags()[13] ? this.broker : (com.schema.avro.Broker) defaultValue(fields()[13]);
         }
-        record.risks = fieldSetFlags()[14] ? this.risks : (java.util.List<com.cardif.avro.Risk>) defaultValue(fields()[14]);
+        record.risks = fieldSetFlags()[14] ? this.risks : (java.util.List<com.schema.avro.Risk>) defaultValue(fields()[14]);
         if (productBuilder != null) {
           try {
             record.product = this.productBuilder.build();
@@ -1429,7 +1429,7 @@ static {
             throw e;
           }
         } else {
-          record.product = fieldSetFlags()[15] ? this.product : (com.cardif.avro.Product) defaultValue(fields()[15]);
+          record.product = fieldSetFlags()[15] ? this.product : (com.schema.avro.Product) defaultValue(fields()[15]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {

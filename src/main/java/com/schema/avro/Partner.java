@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Partner extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6696146926691823330L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Partner\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"partnerId\",\"type\":\"long\"},{\"name\":\"partnerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  private static final long serialVersionUID = 4478502908153431170L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Partner\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"partnerId\",\"type\":\"long\"},{\"name\":\"partnerName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -136,8 +136,8 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
    * Creates a new Partner RecordBuilder.
    * @return A new Partner RecordBuilder
    */
-  public static com.cardif.avro.Partner.Builder newBuilder() {
-    return new com.cardif.avro.Partner.Builder();
+  public static com.schema.avro.Partner.Builder newBuilder() {
+    return new com.schema.avro.Partner.Builder();
   }
 
   /**
@@ -145,11 +145,11 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing builder to copy.
    * @return A new Partner RecordBuilder
    */
-  public static com.cardif.avro.Partner.Builder newBuilder(com.cardif.avro.Partner.Builder other) {
+  public static com.schema.avro.Partner.Builder newBuilder(com.schema.avro.Partner.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Partner.Builder();
+      return new com.schema.avro.Partner.Builder();
     } else {
-      return new com.cardif.avro.Partner.Builder(other);
+      return new com.schema.avro.Partner.Builder(other);
     }
   }
 
@@ -158,11 +158,11 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param other The existing instance to copy.
    * @return A new Partner RecordBuilder
    */
-  public static com.cardif.avro.Partner.Builder newBuilder(com.cardif.avro.Partner other) {
+  public static com.schema.avro.Partner.Builder newBuilder(com.schema.avro.Partner other) {
     if (other == null) {
-      return new com.cardif.avro.Partner.Builder();
+      return new com.schema.avro.Partner.Builder();
     } else {
-      return new com.cardif.avro.Partner.Builder(other);
+      return new com.schema.avro.Partner.Builder(other);
     }
   }
 
@@ -185,7 +185,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Partner.Builder other) {
+    private Builder(com.schema.avro.Partner.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.partnerId)) {
         this.partnerId = data().deepCopy(fields()[0].schema(), other.partnerId);
@@ -201,7 +201,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Partner instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Partner other) {
+    private Builder(com.schema.avro.Partner other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.partnerId)) {
         this.partnerId = data().deepCopy(fields()[0].schema(), other.partnerId);
@@ -227,7 +227,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'partnerId'.
       * @return This builder.
       */
-    public com.cardif.avro.Partner.Builder setPartnerId(long value) {
+    public com.schema.avro.Partner.Builder setPartnerId(long value) {
       validate(fields()[0], value);
       this.partnerId = value;
       fieldSetFlags()[0] = true;
@@ -247,7 +247,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'partnerId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Partner.Builder clearPartnerId() {
+    public com.schema.avro.Partner.Builder clearPartnerId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -266,7 +266,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'partnerName'.
       * @return This builder.
       */
-    public com.cardif.avro.Partner.Builder setPartnerName(java.lang.String value) {
+    public com.schema.avro.Partner.Builder setPartnerName(java.lang.String value) {
       validate(fields()[1], value);
       this.partnerName = value;
       fieldSetFlags()[1] = true;
@@ -286,7 +286,7 @@ public class Partner extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'partnerName' field.
       * @return This builder.
       */
-    public com.cardif.avro.Partner.Builder clearPartnerName() {
+    public com.schema.avro.Partner.Builder clearPartnerName() {
       partnerName = null;
       fieldSetFlags()[1] = false;
       return this;

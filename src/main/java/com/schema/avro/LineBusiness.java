@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -517663502977028238L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"LineBusiness\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
+  private static final long serialVersionUID = 355266813530306098L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"LineBusiness\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -136,8 +136,8 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
    * Creates a new LineBusiness RecordBuilder.
    * @return A new LineBusiness RecordBuilder
    */
-  public static com.cardif.avro.LineBusiness.Builder newBuilder() {
-    return new com.cardif.avro.LineBusiness.Builder();
+  public static com.schema.avro.LineBusiness.Builder newBuilder() {
+    return new com.schema.avro.LineBusiness.Builder();
   }
 
   /**
@@ -145,11 +145,11 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing builder to copy.
    * @return A new LineBusiness RecordBuilder
    */
-  public static com.cardif.avro.LineBusiness.Builder newBuilder(com.cardif.avro.LineBusiness.Builder other) {
+  public static com.schema.avro.LineBusiness.Builder newBuilder(com.schema.avro.LineBusiness.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.LineBusiness.Builder();
+      return new com.schema.avro.LineBusiness.Builder();
     } else {
-      return new com.cardif.avro.LineBusiness.Builder(other);
+      return new com.schema.avro.LineBusiness.Builder(other);
     }
   }
 
@@ -158,11 +158,11 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
    * @param other The existing instance to copy.
    * @return A new LineBusiness RecordBuilder
    */
-  public static com.cardif.avro.LineBusiness.Builder newBuilder(com.cardif.avro.LineBusiness other) {
+  public static com.schema.avro.LineBusiness.Builder newBuilder(com.schema.avro.LineBusiness other) {
     if (other == null) {
-      return new com.cardif.avro.LineBusiness.Builder();
+      return new com.schema.avro.LineBusiness.Builder();
     } else {
-      return new com.cardif.avro.LineBusiness.Builder(other);
+      return new com.schema.avro.LineBusiness.Builder(other);
     }
   }
 
@@ -185,7 +185,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.LineBusiness.Builder other) {
+    private Builder(com.schema.avro.LineBusiness.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.lineBusinessId)) {
         this.lineBusinessId = data().deepCopy(fields()[0].schema(), other.lineBusinessId);
@@ -201,7 +201,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
      * Creates a Builder by copying an existing LineBusiness instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.LineBusiness other) {
+    private Builder(com.schema.avro.LineBusiness other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.lineBusinessId)) {
         this.lineBusinessId = data().deepCopy(fields()[0].schema(), other.lineBusinessId);
@@ -227,7 +227,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'lineBusinessId'.
       * @return This builder.
       */
-    public com.cardif.avro.LineBusiness.Builder setLineBusinessId(int value) {
+    public com.schema.avro.LineBusiness.Builder setLineBusinessId(int value) {
       validate(fields()[0], value);
       this.lineBusinessId = value;
       fieldSetFlags()[0] = true;
@@ -247,7 +247,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'lineBusinessId' field.
       * @return This builder.
       */
-    public com.cardif.avro.LineBusiness.Builder clearLineBusinessId() {
+    public com.schema.avro.LineBusiness.Builder clearLineBusinessId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -266,7 +266,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
       * @param value The value of 'lineBusinessName'.
       * @return This builder.
       */
-    public com.cardif.avro.LineBusiness.Builder setLineBusinessName(java.lang.String value) {
+    public com.schema.avro.LineBusiness.Builder setLineBusinessName(java.lang.String value) {
       validate(fields()[1], value);
       this.lineBusinessName = value;
       fieldSetFlags()[1] = true;
@@ -286,7 +286,7 @@ public class LineBusiness extends org.apache.avro.specific.SpecificRecordBase im
       * Clears the value of the 'lineBusinessName' field.
       * @return This builder.
       */
-    public com.cardif.avro.LineBusiness.Builder clearLineBusinessName() {
+    public com.schema.avro.LineBusiness.Builder clearLineBusinessName() {
       lineBusinessName = null;
       fieldSetFlags()[1] = false;
       return this;

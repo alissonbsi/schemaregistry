@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Agent extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 508062833817588281L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Agent\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}");
+  private static final long serialVersionUID = 5001552845198173166L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Agent\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"agentId\",\"type\":\"long\"},{\"name\":\"agentName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"agentSocialSec\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"cmsPercent\",\"type\":\"double\"},{\"name\":\"cmsValue\",\"type\":[\"null\",\"double\"]}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -181,8 +181,8 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
    * Creates a new Agent RecordBuilder.
    * @return A new Agent RecordBuilder
    */
-  public static com.cardif.avro.Agent.Builder newBuilder() {
-    return new com.cardif.avro.Agent.Builder();
+  public static com.schema.avro.Agent.Builder newBuilder() {
+    return new com.schema.avro.Agent.Builder();
   }
 
   /**
@@ -190,11 +190,11 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing builder to copy.
    * @return A new Agent RecordBuilder
    */
-  public static com.cardif.avro.Agent.Builder newBuilder(com.cardif.avro.Agent.Builder other) {
+  public static com.schema.avro.Agent.Builder newBuilder(com.schema.avro.Agent.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Agent.Builder();
+      return new com.schema.avro.Agent.Builder();
     } else {
-      return new com.cardif.avro.Agent.Builder(other);
+      return new com.schema.avro.Agent.Builder(other);
     }
   }
 
@@ -203,11 +203,11 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing instance to copy.
    * @return A new Agent RecordBuilder
    */
-  public static com.cardif.avro.Agent.Builder newBuilder(com.cardif.avro.Agent other) {
+  public static com.schema.avro.Agent.Builder newBuilder(com.schema.avro.Agent other) {
     if (other == null) {
-      return new com.cardif.avro.Agent.Builder();
+      return new com.schema.avro.Agent.Builder();
     } else {
-      return new com.cardif.avro.Agent.Builder(other);
+      return new com.schema.avro.Agent.Builder(other);
     }
   }
 
@@ -233,7 +233,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Agent.Builder other) {
+    private Builder(com.schema.avro.Agent.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.agentId)) {
         this.agentId = data().deepCopy(fields()[0].schema(), other.agentId);
@@ -261,7 +261,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Agent instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Agent other) {
+    private Builder(com.schema.avro.Agent other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.agentId)) {
         this.agentId = data().deepCopy(fields()[0].schema(), other.agentId);
@@ -299,7 +299,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'agentId'.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder setAgentId(long value) {
+    public com.schema.avro.Agent.Builder setAgentId(long value) {
       validate(fields()[0], value);
       this.agentId = value;
       fieldSetFlags()[0] = true;
@@ -319,7 +319,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'agentId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder clearAgentId() {
+    public com.schema.avro.Agent.Builder clearAgentId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -338,7 +338,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'agentName'.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder setAgentName(java.lang.String value) {
+    public com.schema.avro.Agent.Builder setAgentName(java.lang.String value) {
       validate(fields()[1], value);
       this.agentName = value;
       fieldSetFlags()[1] = true;
@@ -358,7 +358,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'agentName' field.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder clearAgentName() {
+    public com.schema.avro.Agent.Builder clearAgentName() {
       agentName = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -378,7 +378,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'agentSocialSec'.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder setAgentSocialSec(java.lang.String value) {
+    public com.schema.avro.Agent.Builder setAgentSocialSec(java.lang.String value) {
       validate(fields()[2], value);
       this.agentSocialSec = value;
       fieldSetFlags()[2] = true;
@@ -398,7 +398,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'agentSocialSec' field.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder clearAgentSocialSec() {
+    public com.schema.avro.Agent.Builder clearAgentSocialSec() {
       agentSocialSec = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -418,7 +418,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'cmsPercent'.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder setCmsPercent(double value) {
+    public com.schema.avro.Agent.Builder setCmsPercent(double value) {
       validate(fields()[3], value);
       this.cmsPercent = value;
       fieldSetFlags()[3] = true;
@@ -438,7 +438,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'cmsPercent' field.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder clearCmsPercent() {
+    public com.schema.avro.Agent.Builder clearCmsPercent() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -457,7 +457,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'cmsValue'.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder setCmsValue(java.lang.Double value) {
+    public com.schema.avro.Agent.Builder setCmsValue(java.lang.Double value) {
       validate(fields()[4], value);
       this.cmsValue = value;
       fieldSetFlags()[4] = true;
@@ -477,7 +477,7 @@ public class Agent extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'cmsValue' field.
       * @return This builder.
       */
-    public com.cardif.avro.Agent.Builder clearCmsValue() {
+    public com.schema.avro.Agent.Builder clearCmsValue() {
       cmsValue = null;
       fieldSetFlags()[4] = false;
       return this;

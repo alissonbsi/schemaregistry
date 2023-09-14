@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Coverage extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 2604243388026893296L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coverage\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"coverageId\",\"type\":\"long\"},{\"name\":\"coverageDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"isBasicRisk\",\"type\":\"boolean\",\"default\":false},{\"name\":\"maxIndemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}}}]}");
+  private static final long serialVersionUID = 1886637526108938026L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Coverage\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"coverageId\",\"type\":\"long\"},{\"name\":\"coverageDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"isBasicRisk\",\"type\":\"boolean\",\"default\":false},{\"name\":\"maxIndemnity\",\"type\":\"float\"},{\"name\":\"plans\",\"type\":{\"type\":\"array\",\"items\":{\"type\":\"record\",\"name\":\"Plan\",\"fields\":[{\"name\":\"planId\",\"type\":\"long\"},{\"name\":\"planDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"valuePremium\",\"type\":[\"null\",\"double\"]},{\"name\":\"factorPremium\",\"type\":[\"null\",\"double\"]}]}}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -75,7 +75,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    private java.lang.String coverageDescription;
    private boolean isBasicRisk;
    private float maxIndemnity;
-   private java.util.List<com.cardif.avro.Plan> plans;
+   private java.util.List<com.schema.avro.Plan> plans;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -92,7 +92,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    * @param maxIndemnity The new value for maxIndemnity
    * @param plans The new value for plans
    */
-  public Coverage(java.lang.Long coverageId, java.lang.String coverageDescription, java.lang.Boolean isBasicRisk, java.lang.Float maxIndemnity, java.util.List<com.cardif.avro.Plan> plans) {
+  public Coverage(java.lang.Long coverageId, java.lang.String coverageDescription, java.lang.Boolean isBasicRisk, java.lang.Float maxIndemnity, java.util.List<com.schema.avro.Plan> plans) {
     this.coverageId = coverageId;
     this.coverageDescription = coverageDescription;
     this.isBasicRisk = isBasicRisk;
@@ -122,7 +122,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
     case 1: coverageDescription = value$ != null ? value$.toString() : null; break;
     case 2: isBasicRisk = (java.lang.Boolean)value$; break;
     case 3: maxIndemnity = (java.lang.Float)value$; break;
-    case 4: plans = (java.util.List<com.cardif.avro.Plan>)value$; break;
+    case 4: plans = (java.util.List<com.schema.avro.Plan>)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -171,7 +171,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    * Gets the value of the 'plans' field.
    * @return The value of the 'plans' field.
    */
-  public java.util.List<com.cardif.avro.Plan> getPlans() {
+  public java.util.List<com.schema.avro.Plan> getPlans() {
     return plans;
   }
 
@@ -181,8 +181,8 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    * Creates a new Coverage RecordBuilder.
    * @return A new Coverage RecordBuilder
    */
-  public static com.cardif.avro.Coverage.Builder newBuilder() {
-    return new com.cardif.avro.Coverage.Builder();
+  public static com.schema.avro.Coverage.Builder newBuilder() {
+    return new com.schema.avro.Coverage.Builder();
   }
 
   /**
@@ -190,11 +190,11 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    * @param other The existing builder to copy.
    * @return A new Coverage RecordBuilder
    */
-  public static com.cardif.avro.Coverage.Builder newBuilder(com.cardif.avro.Coverage.Builder other) {
+  public static com.schema.avro.Coverage.Builder newBuilder(com.schema.avro.Coverage.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Coverage.Builder();
+      return new com.schema.avro.Coverage.Builder();
     } else {
-      return new com.cardif.avro.Coverage.Builder(other);
+      return new com.schema.avro.Coverage.Builder(other);
     }
   }
 
@@ -203,11 +203,11 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
    * @param other The existing instance to copy.
    * @return A new Coverage RecordBuilder
    */
-  public static com.cardif.avro.Coverage.Builder newBuilder(com.cardif.avro.Coverage other) {
+  public static com.schema.avro.Coverage.Builder newBuilder(com.schema.avro.Coverage other) {
     if (other == null) {
-      return new com.cardif.avro.Coverage.Builder();
+      return new com.schema.avro.Coverage.Builder();
     } else {
-      return new com.cardif.avro.Coverage.Builder(other);
+      return new com.schema.avro.Coverage.Builder(other);
     }
   }
 
@@ -222,7 +222,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
     private java.lang.String coverageDescription;
     private boolean isBasicRisk;
     private float maxIndemnity;
-    private java.util.List<com.cardif.avro.Plan> plans;
+    private java.util.List<com.schema.avro.Plan> plans;
 
     /** Creates a new Builder */
     private Builder() {
@@ -233,7 +233,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Coverage.Builder other) {
+    private Builder(com.schema.avro.Coverage.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.coverageId)) {
         this.coverageId = data().deepCopy(fields()[0].schema(), other.coverageId);
@@ -261,7 +261,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
      * Creates a Builder by copying an existing Coverage instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Coverage other) {
+    private Builder(com.schema.avro.Coverage other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.coverageId)) {
         this.coverageId = data().deepCopy(fields()[0].schema(), other.coverageId);
@@ -299,7 +299,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'coverageId'.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder setCoverageId(long value) {
+    public com.schema.avro.Coverage.Builder setCoverageId(long value) {
       validate(fields()[0], value);
       this.coverageId = value;
       fieldSetFlags()[0] = true;
@@ -319,7 +319,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'coverageId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder clearCoverageId() {
+    public com.schema.avro.Coverage.Builder clearCoverageId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -338,7 +338,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'coverageDescription'.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder setCoverageDescription(java.lang.String value) {
+    public com.schema.avro.Coverage.Builder setCoverageDescription(java.lang.String value) {
       validate(fields()[1], value);
       this.coverageDescription = value;
       fieldSetFlags()[1] = true;
@@ -358,7 +358,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'coverageDescription' field.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder clearCoverageDescription() {
+    public com.schema.avro.Coverage.Builder clearCoverageDescription() {
       coverageDescription = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -378,7 +378,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'isBasicRisk'.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder setIsBasicRisk(boolean value) {
+    public com.schema.avro.Coverage.Builder setIsBasicRisk(boolean value) {
       validate(fields()[2], value);
       this.isBasicRisk = value;
       fieldSetFlags()[2] = true;
@@ -398,7 +398,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'isBasicRisk' field.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder clearIsBasicRisk() {
+    public com.schema.avro.Coverage.Builder clearIsBasicRisk() {
       fieldSetFlags()[2] = false;
       return this;
     }
@@ -417,7 +417,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'maxIndemnity'.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder setMaxIndemnity(float value) {
+    public com.schema.avro.Coverage.Builder setMaxIndemnity(float value) {
       validate(fields()[3], value);
       this.maxIndemnity = value;
       fieldSetFlags()[3] = true;
@@ -437,7 +437,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'maxIndemnity' field.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder clearMaxIndemnity() {
+    public com.schema.avro.Coverage.Builder clearMaxIndemnity() {
       fieldSetFlags()[3] = false;
       return this;
     }
@@ -446,7 +446,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Gets the value of the 'plans' field.
       * @return The value.
       */
-    public java.util.List<com.cardif.avro.Plan> getPlans() {
+    public java.util.List<com.schema.avro.Plan> getPlans() {
       return plans;
     }
 
@@ -456,7 +456,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * @param value The value of 'plans'.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder setPlans(java.util.List<com.cardif.avro.Plan> value) {
+    public com.schema.avro.Coverage.Builder setPlans(java.util.List<com.schema.avro.Plan> value) {
       validate(fields()[4], value);
       this.plans = value;
       fieldSetFlags()[4] = true;
@@ -476,7 +476,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       * Clears the value of the 'plans' field.
       * @return This builder.
       */
-    public com.cardif.avro.Coverage.Builder clearPlans() {
+    public com.schema.avro.Coverage.Builder clearPlans() {
       plans = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -491,7 +491,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
         record.coverageDescription = fieldSetFlags()[1] ? this.coverageDescription : (java.lang.String) defaultValue(fields()[1]);
         record.isBasicRisk = fieldSetFlags()[2] ? this.isBasicRisk : (java.lang.Boolean) defaultValue(fields()[2]);
         record.maxIndemnity = fieldSetFlags()[3] ? this.maxIndemnity : (java.lang.Float) defaultValue(fields()[3]);
-        record.plans = fieldSetFlags()[4] ? this.plans : (java.util.List<com.cardif.avro.Plan>) defaultValue(fields()[4]);
+        record.plans = fieldSetFlags()[4] ? this.plans : (java.util.List<com.schema.avro.Plan>) defaultValue(fields()[4]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -536,7 +536,7 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
     out.writeArrayStart();
     out.setItemCount(size0);
     long actualSize0 = 0;
-    for (com.cardif.avro.Plan e0: this.plans) {
+    for (com.schema.avro.Plan e0: this.plans) {
       actualSize0++;
       out.startItem();
       e0.customEncode(out);
@@ -561,17 +561,17 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
       this.maxIndemnity = in.readFloat();
 
       long size0 = in.readArrayStart();
-      java.util.List<com.cardif.avro.Plan> a0 = this.plans;
+      java.util.List<com.schema.avro.Plan> a0 = this.plans;
       if (a0 == null) {
-        a0 = new SpecificData.Array<com.cardif.avro.Plan>((int)size0, SCHEMA$.getField("plans").schema());
+        a0 = new SpecificData.Array<com.schema.avro.Plan>((int)size0, SCHEMA$.getField("plans").schema());
         this.plans = a0;
       } else a0.clear();
-      SpecificData.Array<com.cardif.avro.Plan> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.cardif.avro.Plan>)a0 : null);
+      SpecificData.Array<com.schema.avro.Plan> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.schema.avro.Plan>)a0 : null);
       for ( ; 0 < size0; size0 = in.arrayNext()) {
         for ( ; size0 != 0; size0--) {
-          com.cardif.avro.Plan e0 = (ga0 != null ? ga0.peek() : null);
+          com.schema.avro.Plan e0 = (ga0 != null ? ga0.peek() : null);
           if (e0 == null) {
-            e0 = new com.cardif.avro.Plan();
+            e0 = new com.schema.avro.Plan();
           }
           e0.customDecode(in);
           a0.add(e0);
@@ -599,17 +599,17 @@ public class Coverage extends org.apache.avro.specific.SpecificRecordBase implem
 
         case 4:
           long size0 = in.readArrayStart();
-          java.util.List<com.cardif.avro.Plan> a0 = this.plans;
+          java.util.List<com.schema.avro.Plan> a0 = this.plans;
           if (a0 == null) {
-            a0 = new SpecificData.Array<com.cardif.avro.Plan>((int)size0, SCHEMA$.getField("plans").schema());
+            a0 = new SpecificData.Array<com.schema.avro.Plan>((int)size0, SCHEMA$.getField("plans").schema());
             this.plans = a0;
           } else a0.clear();
-          SpecificData.Array<com.cardif.avro.Plan> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.cardif.avro.Plan>)a0 : null);
+          SpecificData.Array<com.schema.avro.Plan> ga0 = (a0 instanceof SpecificData.Array ? (SpecificData.Array<com.schema.avro.Plan>)a0 : null);
           for ( ; 0 < size0; size0 = in.arrayNext()) {
             for ( ; size0 != 0; size0--) {
-              com.cardif.avro.Plan e0 = (ga0 != null ? ga0.peek() : null);
+              com.schema.avro.Plan e0 = (ga0 != null ? ga0.peek() : null);
               if (e0 == null) {
-                e0 = new com.cardif.avro.Plan();
+                e0 = new com.schema.avro.Plan();
               }
               e0.customDecode(in);
               a0.add(e0);

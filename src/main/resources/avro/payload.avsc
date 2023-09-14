@@ -1,6 +1,6 @@
 {
   "type": "record",
-  "namespace": "com.cardif.avro",
+  "namespace": "com.schema.avro",
   "name": "Payload",
   "fields": [
     { "name": "type", "type": "string" },
@@ -8,7 +8,7 @@
       "type": [
         "null",
         "string",
-        "com.cardif.avro.MasterPolicy"
+        "com.schema.avro.MasterPolicy"
       ]
     }
   ]

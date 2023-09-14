@@ -3,7 +3,7 @@
  *
  * DO NOT EDIT DIRECTLY
  */
-package com.cardif.avro;
+package com.schema.avro;
 
 import org.apache.avro.generic.GenericArray;
 import org.apache.avro.specific.SpecificData;
@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Group extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 6359283995160169505L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Group\",\"namespace\":\"com.cardif.avro\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}");
+  private static final long serialVersionUID = 2548268617576648661L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Group\",\"namespace\":\"com.schema.avro\",\"fields\":[{\"name\":\"groupId\",\"type\":\"int\"},{\"name\":\"groupDescription\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}},{\"name\":\"lineBusiness\",\"type\":{\"type\":\"record\",\"name\":\"LineBusiness\",\"fields\":[{\"name\":\"lineBusinessId\",\"type\":\"int\"},{\"name\":\"lineBusinessName\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"}}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -73,7 +73,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
 
    private int groupId;
    private java.lang.String groupDescription;
-   private com.cardif.avro.LineBusiness lineBusiness;
+   private com.schema.avro.LineBusiness lineBusiness;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -88,7 +88,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
    * @param groupDescription The new value for groupDescription
    * @param lineBusiness The new value for lineBusiness
    */
-  public Group(java.lang.Integer groupId, java.lang.String groupDescription, com.cardif.avro.LineBusiness lineBusiness) {
+  public Group(java.lang.Integer groupId, java.lang.String groupDescription, com.schema.avro.LineBusiness lineBusiness) {
     this.groupId = groupId;
     this.groupDescription = groupDescription;
     this.lineBusiness = lineBusiness;
@@ -112,7 +112,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
     switch (field$) {
     case 0: groupId = (java.lang.Integer)value$; break;
     case 1: groupDescription = value$ != null ? value$.toString() : null; break;
-    case 2: lineBusiness = (com.cardif.avro.LineBusiness)value$; break;
+    case 2: lineBusiness = (com.schema.avro.LineBusiness)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -141,7 +141,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
    * Gets the value of the 'lineBusiness' field.
    * @return The value of the 'lineBusiness' field.
    */
-  public com.cardif.avro.LineBusiness getLineBusiness() {
+  public com.schema.avro.LineBusiness getLineBusiness() {
     return lineBusiness;
   }
 
@@ -151,8 +151,8 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
    * Creates a new Group RecordBuilder.
    * @return A new Group RecordBuilder
    */
-  public static com.cardif.avro.Group.Builder newBuilder() {
-    return new com.cardif.avro.Group.Builder();
+  public static com.schema.avro.Group.Builder newBuilder() {
+    return new com.schema.avro.Group.Builder();
   }
 
   /**
@@ -160,11 +160,11 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing builder to copy.
    * @return A new Group RecordBuilder
    */
-  public static com.cardif.avro.Group.Builder newBuilder(com.cardif.avro.Group.Builder other) {
+  public static com.schema.avro.Group.Builder newBuilder(com.schema.avro.Group.Builder other) {
     if (other == null) {
-      return new com.cardif.avro.Group.Builder();
+      return new com.schema.avro.Group.Builder();
     } else {
-      return new com.cardif.avro.Group.Builder(other);
+      return new com.schema.avro.Group.Builder(other);
     }
   }
 
@@ -173,11 +173,11 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
    * @param other The existing instance to copy.
    * @return A new Group RecordBuilder
    */
-  public static com.cardif.avro.Group.Builder newBuilder(com.cardif.avro.Group other) {
+  public static com.schema.avro.Group.Builder newBuilder(com.schema.avro.Group other) {
     if (other == null) {
-      return new com.cardif.avro.Group.Builder();
+      return new com.schema.avro.Group.Builder();
     } else {
-      return new com.cardif.avro.Group.Builder(other);
+      return new com.schema.avro.Group.Builder(other);
     }
   }
 
@@ -190,8 +190,8 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
 
     private int groupId;
     private java.lang.String groupDescription;
-    private com.cardif.avro.LineBusiness lineBusiness;
-    private com.cardif.avro.LineBusiness.Builder lineBusinessBuilder;
+    private com.schema.avro.LineBusiness lineBusiness;
+    private com.schema.avro.LineBusiness.Builder lineBusinessBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -202,7 +202,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.cardif.avro.Group.Builder other) {
+    private Builder(com.schema.avro.Group.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.groupId)) {
         this.groupId = data().deepCopy(fields()[0].schema(), other.groupId);
@@ -217,7 +217,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
         fieldSetFlags()[2] = other.fieldSetFlags()[2];
       }
       if (other.hasLineBusinessBuilder()) {
-        this.lineBusinessBuilder = com.cardif.avro.LineBusiness.newBuilder(other.getLineBusinessBuilder());
+        this.lineBusinessBuilder = com.schema.avro.LineBusiness.newBuilder(other.getLineBusinessBuilder());
       }
     }
 
@@ -225,7 +225,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
      * Creates a Builder by copying an existing Group instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.cardif.avro.Group other) {
+    private Builder(com.schema.avro.Group other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.groupId)) {
         this.groupId = data().deepCopy(fields()[0].schema(), other.groupId);
@@ -256,7 +256,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'groupId'.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder setGroupId(int value) {
+    public com.schema.avro.Group.Builder setGroupId(int value) {
       validate(fields()[0], value);
       this.groupId = value;
       fieldSetFlags()[0] = true;
@@ -276,7 +276,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'groupId' field.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder clearGroupId() {
+    public com.schema.avro.Group.Builder clearGroupId() {
       fieldSetFlags()[0] = false;
       return this;
     }
@@ -295,7 +295,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'groupDescription'.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder setGroupDescription(java.lang.String value) {
+    public com.schema.avro.Group.Builder setGroupDescription(java.lang.String value) {
       validate(fields()[1], value);
       this.groupDescription = value;
       fieldSetFlags()[1] = true;
@@ -315,7 +315,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'groupDescription' field.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder clearGroupDescription() {
+    public com.schema.avro.Group.Builder clearGroupDescription() {
       groupDescription = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -325,7 +325,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * Gets the value of the 'lineBusiness' field.
       * @return The value.
       */
-    public com.cardif.avro.LineBusiness getLineBusiness() {
+    public com.schema.avro.LineBusiness getLineBusiness() {
       return lineBusiness;
     }
 
@@ -335,7 +335,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * @param value The value of 'lineBusiness'.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder setLineBusiness(com.cardif.avro.LineBusiness value) {
+    public com.schema.avro.Group.Builder setLineBusiness(com.schema.avro.LineBusiness value) {
       validate(fields()[2], value);
       this.lineBusinessBuilder = null;
       this.lineBusiness = value;
@@ -355,12 +355,12 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
      * Gets the Builder instance for the 'lineBusiness' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.cardif.avro.LineBusiness.Builder getLineBusinessBuilder() {
+    public com.schema.avro.LineBusiness.Builder getLineBusinessBuilder() {
       if (lineBusinessBuilder == null) {
         if (hasLineBusiness()) {
-          setLineBusinessBuilder(com.cardif.avro.LineBusiness.newBuilder(lineBusiness));
+          setLineBusinessBuilder(com.schema.avro.LineBusiness.newBuilder(lineBusiness));
         } else {
-          setLineBusinessBuilder(com.cardif.avro.LineBusiness.newBuilder());
+          setLineBusinessBuilder(com.schema.avro.LineBusiness.newBuilder());
         }
       }
       return lineBusinessBuilder;
@@ -372,7 +372,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
      * @return This builder.
      */
 
-    public com.cardif.avro.Group.Builder setLineBusinessBuilder(com.cardif.avro.LineBusiness.Builder value) {
+    public com.schema.avro.Group.Builder setLineBusinessBuilder(com.schema.avro.LineBusiness.Builder value) {
       clearLineBusiness();
       lineBusinessBuilder = value;
       return this;
@@ -390,7 +390,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       * Clears the value of the 'lineBusiness' field.
       * @return This builder.
       */
-    public com.cardif.avro.Group.Builder clearLineBusiness() {
+    public com.schema.avro.Group.Builder clearLineBusiness() {
       lineBusiness = null;
       lineBusinessBuilder = null;
       fieldSetFlags()[2] = false;
@@ -412,7 +412,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
             throw e;
           }
         } else {
-          record.lineBusiness = fieldSetFlags()[2] ? this.lineBusiness : (com.cardif.avro.LineBusiness) defaultValue(fields()[2]);
+          record.lineBusiness = fieldSetFlags()[2] ? this.lineBusiness : (com.schema.avro.LineBusiness) defaultValue(fields()[2]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -464,7 +464,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
       this.groupDescription = in.readString();
 
       if (this.lineBusiness == null) {
-        this.lineBusiness = new com.cardif.avro.LineBusiness();
+        this.lineBusiness = new com.schema.avro.LineBusiness();
       }
       this.lineBusiness.customDecode(in);
 
@@ -481,7 +481,7 @@ public class Group extends org.apache.avro.specific.SpecificRecordBase implement
 
         case 2:
           if (this.lineBusiness == null) {
-            this.lineBusiness = new com.cardif.avro.LineBusiness();
+            this.lineBusiness = new com.schema.avro.LineBusiness();
           }
           this.lineBusiness.customDecode(in);
           break;
