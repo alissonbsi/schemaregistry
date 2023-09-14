@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Plan",
+  "fields": [
+    { "name": "planId", "type": "long" },
+    { "name": "planDescription", "type": "string" },
+    { "name": "valuePremium", "type": ["null", "double"] },
+    { "name": "factorPremium", "type": ["null", "double"]
+    }
+  ]
+}

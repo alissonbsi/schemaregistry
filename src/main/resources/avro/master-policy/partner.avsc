@@ -1,0 +1,9 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Partner",
+  "fields": [
+    { "name": "partnerId", "type": "long" },
+    { "name": "partnerName", "type": "string" }
+  ]
+}

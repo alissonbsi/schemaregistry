@@ -1,0 +1,17 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Coverage",
+  "fields": [
+    { "name": "coverageId", "type": "long" },
+    { "name": "coverageDescription", "type": "string" },
+    { "name": "isBasicRisk", "type": "boolean", "default": false },
+    { "name": "maxIndemnity", "type": "float" },
+    { "name": "plans",
+      "type": {
+        "type": "array",
+        "items": "com.cardif.avro.Plan"
+      }
+    }
+  ]
+}

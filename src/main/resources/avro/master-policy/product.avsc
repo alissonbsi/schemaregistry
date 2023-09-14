@@ -1,0 +1,10 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Product",
+  "fields": [
+    { "name": "productId", "type": "int" },
+    { "name": "productDescription", "type": "string" },
+    { "name": "group", "type": "com.cardif.avro.Group" }
+  ]
+}

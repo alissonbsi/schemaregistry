@@ -1,0 +1,12 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Broker",
+  "fields": [
+    { "name": "brokerId", "type": "long" },
+    { "name": "brokerName", "type": "string" },
+    { "name": "cmsPercent", "type": "double" },
+    { "name": "cmsValue", "type": ["null", "double" ] },
+    { "name": "agent", "type": "com.cardif.avro.Agent" }
+  ]
+}

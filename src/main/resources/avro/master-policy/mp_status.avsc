@@ -1,0 +1,20 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "MasterPolicyStatus",
+  "fields": [
+    { "name": "statusId", "type": "int" },
+    { "name": "status",
+      "type": {"type": "enum",
+        "name": "Status",
+        "symbols": [
+          "ATIVO",
+          "CANCELADO",
+          "NAO_EFETIVADO",
+          "EM_NEGOCIACAO",
+          "PEND_ATIVACAO"
+        ]
+      }
+    }
+  ]
+}

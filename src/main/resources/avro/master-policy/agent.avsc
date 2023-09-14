@@ -1,0 +1,14 @@
+{
+  "type": "record",
+  "namespace": "com.cardif.avro",
+  "name": "Agent",
+  "fields": [
+    { "name": "agentId", "type": "long" },
+    { "name": "agentName", "type": "string" },
+    { "name": "agentSocialSec", "type": "string" },
+    { "name": "cmsPercent", "type": "double" },
+    { "name": "cmsValue",
+      "type": ["null", "double"]
+    }
+  ]
+}

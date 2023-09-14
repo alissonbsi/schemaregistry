@@ -1,0 +1,9 @@
+{
+     "type": "record",
+     "namespace": "com.registry.avro",
+     "name": "Product",
+     "version": "2",
+     "fields": [
+          { "name": "name", "type": "string", "doc": "Nome do Produto" }
+     ]
+}
