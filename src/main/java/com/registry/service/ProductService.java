@@ -42,7 +42,7 @@ public class ProductService implements MessagingPort<Product> {
 		Random rd = new Random();
 
 		var product = Product.newBuilder().setName(((ProductDTO) dto).getName())
-//				.setValor(((ProductDTO) dto).getValor())
+				.setValor(((ProductDTO) dto).getValor())
 				.build();
 		
 		
