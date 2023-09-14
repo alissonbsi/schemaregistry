@@ -2,28 +2,19 @@
   "type": "record",
   "namespace": "com.registry.avro",
   "name": "RecordPoc",
-  "version": "2",
-  "fields": [
-    { "name": "raw",
-      "type": ["null",
-        {
-          "type": "record",
-          "namespace": "com.registry.avro",
-          "name": "Product",
-          "fields": [
-            { "name": "name", "type": "string", "doc": "Nome do Produto" }
-          ]
-        },
-        {
-          "type": "record",
-          "namespace": "com.registry.avro.business",
-          "name": "BusinessRule",
-          "fields": [
-            { "name": "role",
-              "doc": "Regra",
-              "type": {"type": "enum", "name": "Role", "symbols": ["ADMIN", "USER", "MANAGER"]}}]
-        }
-      ]},
-    { "name": "type", "type": "string", "doc": "Tipo do Record" }
+  "fields":[
+    {
+      "name": "raw",
+      "type": [
+        "null",
+        "com.registry.avro.Product",
+        "com.registry.avro.business.BusinessRule"
+      ]
+    },
+    {
+      "name": "type",
+      "type": "string",
+      "doc": "Tipo do Record"
+    }
   ]
 }

@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -1611229178940644106L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"BusinessRule\",\"namespace\":\"com.registry.avro.business\",\"fields\":[{\"name\":\"role\",\"type\":{\"type\":\"enum\",\"name\":\"Role\",\"symbols\":[\"ADMIN\",\"USER\",\"MANAGER\"]},\"doc\":\"Regra\"}]}");
+  private static final long serialVersionUID = -2897716980528632837L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"BusinessRule\",\"namespace\":\"com.registry.avro.business\",\"fields\":[{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Nome da regra\"},{\"name\":\"role\",\"type\":{\"type\":\"enum\",\"name\":\"Role\",\"symbols\":[\"ADMIN\",\"USER\",\"MANAGER\"]},\"doc\":\"Regra\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -71,6 +71,8 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
     return DECODER.decode(b);
   }
 
+  /** Nome da regra */
+   private java.lang.String name;
   /** Regra */
    private com.registry.avro.business.Role role;
 
@@ -83,9 +85,11 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
 
   /**
    * All-args constructor.
+   * @param name Nome da regra
    * @param role Regra
    */
-  public BusinessRule(com.registry.avro.business.Role role) {
+  public BusinessRule(java.lang.String name, com.registry.avro.business.Role role) {
+    this.name = name;
     this.role = role;
   }
 
@@ -94,7 +98,8 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return role;
+    case 0: return name;
+    case 1: return role;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -103,10 +108,21 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: role = (com.registry.avro.business.Role)value$; break;
+    case 0: name = value$ != null ? value$.toString() : null; break;
+    case 1: role = (com.registry.avro.business.Role)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
+
+  /**
+   * Gets the value of the 'name' field.
+   * @return Nome da regra
+   */
+  public java.lang.String getName() {
+    return name;
+  }
+
+
 
   /**
    * Gets the value of the 'role' field.
@@ -159,6 +175,8 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
   public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<BusinessRule>
     implements org.apache.avro.data.RecordBuilder<BusinessRule> {
 
+    /** Nome da regra */
+    private java.lang.String name;
     /** Regra */
     private com.registry.avro.business.Role role;
 
@@ -173,9 +191,13 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
      */
     private Builder(com.registry.avro.business.BusinessRule.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.role)) {
-        this.role = data().deepCopy(fields()[0].schema(), other.role);
+      if (isValidValue(fields()[0], other.name)) {
+        this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
+      }
+      if (isValidValue(fields()[1], other.role)) {
+        this.role = data().deepCopy(fields()[1].schema(), other.role);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
       }
     }
 
@@ -185,10 +207,58 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
      */
     private Builder(com.registry.avro.business.BusinessRule other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.role)) {
-        this.role = data().deepCopy(fields()[0].schema(), other.role);
+      if (isValidValue(fields()[0], other.name)) {
+        this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = true;
       }
+      if (isValidValue(fields()[1], other.role)) {
+        this.role = data().deepCopy(fields()[1].schema(), other.role);
+        fieldSetFlags()[1] = true;
+      }
+    }
+
+    /**
+      * Gets the value of the 'name' field.
+      * Nome da regra
+      * @return The value.
+      */
+    public java.lang.String getName() {
+      return name;
+    }
+
+
+    /**
+      * Sets the value of the 'name' field.
+      * Nome da regra
+      * @param value The value of 'name'.
+      * @return This builder.
+      */
+    public com.registry.avro.business.BusinessRule.Builder setName(java.lang.String value) {
+      validate(fields()[0], value);
+      this.name = value;
+      fieldSetFlags()[0] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'name' field has been set.
+      * Nome da regra
+      * @return True if the 'name' field has been set, false otherwise.
+      */
+    public boolean hasName() {
+      return fieldSetFlags()[0];
+    }
+
+
+    /**
+      * Clears the value of the 'name' field.
+      * Nome da regra
+      * @return This builder.
+      */
+    public com.registry.avro.business.BusinessRule.Builder clearName() {
+      name = null;
+      fieldSetFlags()[0] = false;
+      return this;
     }
 
     /**
@@ -208,9 +278,9 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
       * @return This builder.
       */
     public com.registry.avro.business.BusinessRule.Builder setRole(com.registry.avro.business.Role value) {
-      validate(fields()[0], value);
+      validate(fields()[1], value);
       this.role = value;
-      fieldSetFlags()[0] = true;
+      fieldSetFlags()[1] = true;
       return this;
     }
 
@@ -220,7 +290,7 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
       * @return True if the 'role' field has been set, false otherwise.
       */
     public boolean hasRole() {
-      return fieldSetFlags()[0];
+      return fieldSetFlags()[1];
     }
 
 
@@ -231,7 +301,7 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
       */
     public com.registry.avro.business.BusinessRule.Builder clearRole() {
       role = null;
-      fieldSetFlags()[0] = false;
+      fieldSetFlags()[1] = false;
       return this;
     }
 
@@ -240,7 +310,8 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
     public BusinessRule build() {
       try {
         BusinessRule record = new BusinessRule();
-        record.role = fieldSetFlags()[0] ? this.role : (com.registry.avro.business.Role) defaultValue(fields()[0]);
+        record.name = fieldSetFlags()[0] ? this.name : (java.lang.String) defaultValue(fields()[0]);
+        record.role = fieldSetFlags()[1] ? this.role : (com.registry.avro.business.Role) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -273,6 +344,8 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
+    out.writeString(this.name);
+
     out.writeEnum(this.role.ordinal());
 
   }
@@ -282,12 +355,18 @@ public class BusinessRule extends org.apache.avro.specific.SpecificRecordBase im
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
+      this.name = in.readString();
+
       this.role = com.registry.avro.business.Role.values()[in.readEnum()];
 
     } else {
-      for (int i = 0; i < 1; i++) {
+      for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
+          this.name = in.readString();
+          break;
+
+        case 1:
           this.role = com.registry.avro.business.Role.values()[in.readEnum()];
           break;
 

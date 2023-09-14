@@ -1,9 +1,0 @@
-{
-  "type": "record",
-  "namespace": "com.schema.avro",
-  "name": "LineBusiness",
-  "fields": [
-    { "name": "lineBusinessId", "type": "int" },
-    { "name": "lineBusinessName", "type": "string" }
-  ]
-}

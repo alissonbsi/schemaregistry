@@ -102,21 +102,11 @@
                             <goal>schema</goal>
                         </goals>
                         <configuration>
-                            <sourceDirectory>${project.basedir}/src/main/resources/avro/master-policy</sourceDirectory>
+                            <sourceDirectory>${project.basedir}/src/main/resources/avro</sourceDirectory>
                             <outputDirectory>${project.basedir}/src/main/java</outputDirectory>
                             <imports>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/partner.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/mp_status.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/agent.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/broker.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/plan.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/coverage.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/risk.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/line-business.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/group.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/product.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/master-policy/master-policy.avsc</import>
-                                <import>${project.basedir}/src/main/resources/avro/payload.avsc</import>
+                                <import>${project.basedir}/src/main/resources/avro/product-v1.avsc</import>
+                                <import>${project.basedir}/src/main/resources/avro/businessrule-v1.avsc</import>
                             </imports>
                             <stringType>String</stringType>
                             <createSetters>false</createSetters>

@@ -2,7 +2,6 @@
      "type": "record",
      "namespace": "com.registry.avro.business",
      "name": "BusinessRule",
-     "version": "1",
      "fields": [
        { "name": "name", "type": "string", "doc": "Nome da regra" },
        { "name": "role",

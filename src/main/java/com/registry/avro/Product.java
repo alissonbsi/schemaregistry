@@ -14,8 +14,8 @@ import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
 public class Product extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 8670862599114420708L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Product\",\"namespace\":\"com.registry.avro\",\"fields\":[{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Nome do Produto\"}]}");
+  private static final long serialVersionUID = 8417069973226146285L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Product\",\"namespace\":\"com.registry.avro\",\"fields\":[{\"name\":\"name\",\"type\":{\"type\":\"string\",\"avro.java.string\":\"String\"},\"doc\":\"Nome do Produto\"},{\"name\":\"valor\",\"type\":\"double\",\"doc\":\"Valor do Produto\"}],\"version\":\"1\"}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
@@ -73,6 +73,8 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
   /** Nome do Produto */
    private java.lang.String name;
+  /** Valor do Produto */
+   private double valor;
 
   /**
    * Default constructor.  Note that this does not initialize fields
@@ -84,9 +86,11 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
   /**
    * All-args constructor.
    * @param name Nome do Produto
+   * @param valor Valor do Produto
    */
-  public Product(java.lang.String name) {
+  public Product(java.lang.String name, java.lang.Double valor) {
     this.name = name;
+    this.valor = valor;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -95,6 +99,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
   public java.lang.Object get(int field$) {
     switch (field$) {
     case 0: return name;
+    case 1: return valor;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -104,6 +109,7 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
     case 0: name = value$ != null ? value$.toString() : null; break;
+    case 1: valor = (java.lang.Double)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -114,6 +120,16 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
    */
   public java.lang.String getName() {
     return name;
+  }
+
+
+
+  /**
+   * Gets the value of the 'valor' field.
+   * @return Valor do Produto
+   */
+  public double getValor() {
+    return valor;
   }
 
 
@@ -161,6 +177,8 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
 
     /** Nome do Produto */
     private java.lang.String name;
+    /** Valor do Produto */
+    private double valor;
 
     /** Creates a new Builder */
     private Builder() {
@@ -177,6 +195,10 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
         this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
+      if (isValidValue(fields()[1], other.valor)) {
+        this.valor = data().deepCopy(fields()[1].schema(), other.valor);
+        fieldSetFlags()[1] = other.fieldSetFlags()[1];
+      }
     }
 
     /**
@@ -188,6 +210,10 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       if (isValidValue(fields()[0], other.name)) {
         this.name = data().deepCopy(fields()[0].schema(), other.name);
         fieldSetFlags()[0] = true;
+      }
+      if (isValidValue(fields()[1], other.valor)) {
+        this.valor = data().deepCopy(fields()[1].schema(), other.valor);
+        fieldSetFlags()[1] = true;
       }
     }
 
@@ -235,12 +261,56 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
       return this;
     }
 
+    /**
+      * Gets the value of the 'valor' field.
+      * Valor do Produto
+      * @return The value.
+      */
+    public double getValor() {
+      return valor;
+    }
+
+
+    /**
+      * Sets the value of the 'valor' field.
+      * Valor do Produto
+      * @param value The value of 'valor'.
+      * @return This builder.
+      */
+    public com.registry.avro.Product.Builder setValor(double value) {
+      validate(fields()[1], value);
+      this.valor = value;
+      fieldSetFlags()[1] = true;
+      return this;
+    }
+
+    /**
+      * Checks whether the 'valor' field has been set.
+      * Valor do Produto
+      * @return True if the 'valor' field has been set, false otherwise.
+      */
+    public boolean hasValor() {
+      return fieldSetFlags()[1];
+    }
+
+
+    /**
+      * Clears the value of the 'valor' field.
+      * Valor do Produto
+      * @return This builder.
+      */
+    public com.registry.avro.Product.Builder clearValor() {
+      fieldSetFlags()[1] = false;
+      return this;
+    }
+
     @Override
     @SuppressWarnings("unchecked")
     public Product build() {
       try {
         Product record = new Product();
         record.name = fieldSetFlags()[0] ? this.name : (java.lang.String) defaultValue(fields()[0]);
+        record.valor = fieldSetFlags()[1] ? this.valor : (java.lang.Double) defaultValue(fields()[1]);
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
         throw e;
@@ -275,6 +345,8 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
   {
     out.writeString(this.name);
 
+    out.writeDouble(this.valor);
+
   }
 
   @Override public void customDecode(org.apache.avro.io.ResolvingDecoder in)
@@ -284,11 +356,17 @@ public class Product extends org.apache.avro.specific.SpecificRecordBase impleme
     if (fieldOrder == null) {
       this.name = in.readString();
 
+      this.valor = in.readDouble();
+
     } else {
-      for (int i = 0; i < 1; i++) {
+      for (int i = 0; i < 2; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
           this.name = in.readString();
+          break;
+
+        case 1:
+          this.valor = in.readDouble();
           break;
 
         default:
